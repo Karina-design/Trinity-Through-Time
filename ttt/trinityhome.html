@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity College Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar"> <!--navigation bar--> <!--waiting on logo.png-->
+            <div class="logo"><img src="logo.png" alt="logo" width="100" height="50"></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="home-link">Home</a></li> <!--link the pages to the correct place-->
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#login" class="login-link">Log-in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+
+        <div class="hero-image"></div>
+        <button class="circle-button" style="top: 450px; left: 350px;">1</button>
+        <!--link the buttons to the correct building page-->
+        <button class="circle-button" style="top: 350px; left: 980px;">2</button>
+        <button class="circle-button" style="top: 370px; right: 80px;">3</button>
+        <button class="circle-button" style="top: 400px; left: 60px;">4</button>
+
+    </section>
+    <section id="history">
+        <!-- Background Image -->
+        <div class="history-image"></div>
+
+        <!-- Text Content -->
+        <div class="history-content">
+            <h2>History of Trinity College Dublin</h2>
+            <p>
+                Trinity College Dublin, founded in 1592, is more than just Ireland’s oldest university—it’s a living
+                piece of history.
+                From the breathtaking Long Room Library to the world-famous Book of Kells, its campus is a treasure
+                trove of knowledge and culture.
+                Nestled in the heart of Dublin, Trinity has been a hub for brilliant minds for centuries, blending
+                tradition with cutting-edge innovation to shape the future.
+                Whether you’re walking its cobbled paths or diving into groundbreaking research, Trinity is where
+                history and discovery come to life.
+            </p>
+            <a href="explore.html">
+                <button class="round-button">Know More &gt;&gt;&gt;</button>
+            </a>
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="image-gallery">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <img src="longroom.jpeg" class="gallery-image">
+            <img src="image2.jpg" class="gallery-image">
+            <img src="image3.webp" class="gallery-image">
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+            const slides = document.querySelectorAll(".gallery-image");
+
+            function showSlides(index) {
+                slides.forEach((slide, i) => {
+                    slide.style.display = (i === index) ? "block" : "none";
+                });
+            }
+
+            function changeSlide(direction) {
+                slideIndex += direction;
+                if (slideIndex >= slides.length) slideIndex = 0;
+                if (slideIndex < 0) slideIndex = slides.length - 1;
+                showSlides(slideIndex);
+            }
+
+            // Initialize first image
+            showSlides(slideIndex);
+        </script>
+
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <a href="https://www.visittrinity.ie/trinity-trails/" alt="students walking on campus"
+                class="feature-item background-image">Trinity Trails </a>
+
+            <a href="https://www.visittrinity.ie/book-of-kells-experience/?gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBucUCShGvfVHCeSawB0QUPqXn6qCvurfYwTHM0yppK14Az02jtFl5IaApMbEALw_wcB"
+                alt="image of the book of kells Library" class="feature-item background-image2">Book of Kells Tour</a>
+
+            <a href="https://www.visittrinity.ie/stay/?gad_source=1&gclid=Cj0KCQjwv_m-BhC4ARIsAIqNeBtzxbjNcMNLXnxOGHLzBwSIA2B8VXKHbKpcVso6gUrdzN8P9pOp9XAaAiY9EALw_wcB"
+                alt="bedroom with the tower bell through the window" class="feature-item background-image3">Stay at
+                Trinity</a>
+
+            <a href="explore.html" class="feature-item background-image4"
+                alt="students walking out the front gate">Explore</a>
+        </div>
+
+        <a href="hiddengems.html"> <!--make sure this link works-->
+            <div class="gem-icon"></div>
+        </a>
+    </section>
+
+    <section id="contact">
+        <div class="contact-image"></div>
+        <div class="black-overlay"></div>
+        <h2>Contact Us</h2>
+        <div class="form-container">
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <button type="submit" class="silicon-button">Submit</button> <!--make sure this works-->
+            </form>
+        </div>
+        <div class="creators">
+            Meet The Creators: <br><br>
+            <span><a href="https://www.instagram.com/anvita_ab?igsh=MTN2ODRlcWk5anFqcg=="
+                    target="_blank">Anvita</a></span> |
+            <span><a href="https://www.instagram.com/robyn_quigleyx?igsh=MTJ2NzNwOGE3NWo5Ng%3D%3D&utm_source=qr"
+                    target="_blank">Robyn</a></span> |
+            <span><a href="https://www.instagram.com/karina_jethwani?igsh=MWF1cGY3NmppY2k0aw=="
+                    target="_blank">Karina</a></span> |
+            <span><a href="https://www.instagram.com/sanniyuu?igsh=ejZsOHdvcXlzMnIz" target="_blank">Sanni</a></span> |
+            <span><a href="https://www.instagram.com/morgan94devine?igsh=MWFwMHc3dHA5cjV1eA=="
+                    target="_blank">Morgan</a></span> |
+            <span><a href="https://www.instagram.com/oscaarsaban?igsh=MW14a3dqMHE0NDdzdA=="
+                    target="_blank">Óscar</a></span>
+        </div>
+    </section>
+
+    <footer>
+        <p>College Green, Dublin 2, Ireland</p>
+        <p>Meet the Creators: Aviva | Robyn | Karina | Samri | Morgan | Oscar</p>
+    </footer>
+</body>
+
+</html>

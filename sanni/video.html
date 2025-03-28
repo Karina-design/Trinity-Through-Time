@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity College Website</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>   
+    
+</head>
+
+<body>
+       
+    <header>
+        <nav class="navbar"> 
+            <a href="ttt.html">
+            <img class="logo" src="assets/images/logo ttt (6).png">
+            </a>
+            <div class="logo">Trinity<br>Through <br>Time</div>
+           
+        
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#explore">EXPLORE</a></li>
+                <li><a href="#profile">PROFILE</a></li>
+            </ul>
+            <ul class="login">
+                <a href="#LogIn">
+                <img class="logo" src="assets/images/login_账户.png"></a>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <div class="tabs">
+        <a href="image.html" class="tab">IMAGE</a>
+        <a href="video.html" class="tab active">VIDEO</a>
+        <a href="virtual-tour.html" class="tab">VIRTUAL TOUR</a>
+    </div>
+
+    <div class="video-container">
+        <iframe width="1500" height="650" 
+        src="https://www.youtube.com/embed/wur3EZ24hzg" 
+        frameborder="0" 
+        allow="autoplay" 
+        allowfullscreen>
+        </iframe>
+    </div>
+
+        <div class="building-section ">
+            <div class="building-title">
+            <h1 class="building-title">Geography Building</h1>
+            </div>
+        <div class="building-description">
+            <p>Lorem ipsum dolor sit amet. Est sapiente ducimus nam expedita cupiditate a voluptatum esse 33 ipsam eaque. Et alias quos eum quidem expedita sed explicabo commodi sed quia nihil qui reiciendis enim aut minima optio ut amet itaque.</p>
+            <p>Vel recusandae iure ut sint cupiditate vel explicabo voluptatem ut tempore tempora. Est iusto eius eos delectus animi qui molestiae ipsum ut deleniti fugiat. Et aliquid excepturi eum ipsum distinctio eos voluptatibus voluptatem et ipsum perspiciatis aut blanditiis accusantium sed doloribus necessitatibus qui minima dolor.</p>
+            <p>Lorem ipsum dolor sit amet. Est sapiente ducimus nam expedita cupiditate a voluptatum esse 33 ipsam eaque. Et alias quos eum quidem expedita sed explicabo commodi sed quia nihil qui reiciendis enim aut minima optio ut amet itaque.</p>
+        </div>
+    </div>
+   </div>
+
+   <div class="video-container">
+    <button class="button left" onclick="changeVideo('video1')">←</button>
+    
+    <div class="video-wrapper">
+      <iframe id="video-player" width="1000" height="600" 
+        src="https://www.youtube.com/embed/4F5X_-VXefA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+    </div>
+    
+    <button class="button right" onclick="changeVideo()">→</button>
+
+
+  </div>
+
+  <script src="assets/script/video.js"></script>
+
+  <div class="vedio-section ">
+   <div class="vedio-description">
+       <p>Lorem ipsum dolor sit amet. Est sapiente ducimus nam expedita cupiditate a voluptatum esse 33 ipsam eaque. Et alias quos eum quidem expedita sed explicabo commodi sed quia nihil qui reiciendis enim aut minima optio ut amet itaque.</p>
+       <p>Vel recusandae iure ut sint cupiditate vel explicabo voluptatem ut tempore tempora. Est iusto eius eos delectus animi qui molestiae ipsum ut deleniti fugiat. Et aliquid excepturi eum ipsum distinctio eos voluptatibus voluptatem et ipsum perspiciatis aut blanditiis accusantium sed doloribus necessitatibus qui minima dolor.</p>
+       <p>Lorem ipsum dolor sit amet. Est sapiente ducimus nam expedita cupiditate a voluptatum esse 33 ipsam eaque. Et alias quos eum quidem expedita sed explicabo commodi sed quia nihil qui reiciendis enim aut minima optio ut amet itaque.</p>
+   </div>
+</div>
+
+<div class="interviews-container">
+    <div class="interviews-title">
+        <h1 class="interviews-title">Interviews</h1>
+        </div>
+    <div class="shorts-wrapper" id="shortsWrapper">
+        <div class="short-card">
+            <iframe width="290" height="510" 
+         src="https://www.youtube.com/embed/BgvX5T-2tV4" 
+         frameborder="0" allowfullscreen>
+            </iframe>
+            <div class="short-title">Step inside the Museum Building</div>
+        </div>
+        <div class="short-card">
+            <iframe width="290" height="510" 
+         src="https://www.youtube.com/embed/vOpy7IjvMfk" 
+         frameborder="0" allowfullscreen>
+            </iframe>
+            <div class="short-title">Museum Building</div>
+        </div>
+      
+    </div>
+    <button class="nav-button nav-right" onclick="scrollRight()">❯</button>
+</div>
+
+<script src="assets/script/video.js"></script>
+
+
+<footer>
+    <p>College Green, Dublin 2, Ireland</p>
+    <p>Meet the Creators: Aviva | Robyn | Karina | Xinyu | Morgan | Oscar</p>
+</footer>   
+  
+
+</body>
+</html>

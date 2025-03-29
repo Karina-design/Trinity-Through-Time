@@ -18,10 +18,4 @@ function changeVideo() {
 }
 
 
-function scrollLeft() {
-    document.getElementById('shortsWrapper').scrollBy({ left: -220, behavior: 'smooth' });
-}
 
-function scrollRight() {
-    document.getElementById('shortsWrapper').scrollBy({ left: 220, behavior: 'smooth' });
-}

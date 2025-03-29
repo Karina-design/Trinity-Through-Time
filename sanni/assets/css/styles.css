@@ -14,19 +14,27 @@ body {
 }
 
 .login{
-    padding: 20px;
+    padding: 50px;
     float: right;
+
 }
 
 
 .navbar {
-    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 110px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 1000; /* Ensure it's above everything */
+    padding: 0 20px;
+    
+    
 }
 
 .nav-links {
@@ -214,7 +222,7 @@ form input {
 }
 
 
-footer {
+/* footer {
     background-color: #196cd2;
     position:absolute;
     right:0px;
@@ -222,11 +230,92 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+} */
+
+.footer {
+    background-color: #2E67B1; 
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left .footer-logo {
+    width: 80px; 
+    margin-bottom: 10px;
+    /* margin-left: 40px; */
+}
+
+.footer-left p {
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'poppins';
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+    color: #b7d3f8;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #b7d3f8;
+    font-size: 13px;
+    font-family: 'poppins';
+    
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
 
 .tabs {
     display: flex;
     border-bottom: 2px solid #ccc;
+    position: sticky;
+    top: 0;
+    background: white; 
+    text-align: center;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    position: fixed;
+    top: 110px; 
+    left: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+  
 }
 
 .tab {
@@ -242,6 +331,7 @@ footer {
     border: 1px solid #e9e7e7;
     border-bottom: none;
     transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none; 
 }
 
 
@@ -276,6 +366,10 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+a:visited{
+    color:  #0066cc;
+}
+
 .picture_wrapper{
 
   
@@ -292,18 +386,20 @@ footer {
     background:none;
     border:none;
     position: center;
-    margin-top: 20px;
-    top: 55%;
+    margin-top: 80px;
+    top: 90%;
     left: 50%;
     color: white;
     font-size: 30px;
     text-shadow: 5px 5px 30px black;
     font-size:60px;
     font-family:Palatino;
-    color:white
+    color:white;
 
 
 }
+
+
 .geography button:hover {
     text-shadow: 5px 5px 30px white;
 }
@@ -312,7 +408,7 @@ footer {
 
 .TrinityCollegeDublin{
     position: absolute;
-    top: 47%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -323,7 +419,7 @@ footer {
 
 .content_active img{
   
-    height: 640px;    
+    height: 850px;    
     width: 100%;
 }
 
@@ -355,6 +451,7 @@ footer {
     font-size: 1.8rem;
     text-align: center;
     margin: 20px 0;
+    font-weight: bold;
  
 }
 
@@ -363,14 +460,14 @@ footer {
     font-family: 'Palatino', sans-serif;
     font-size: 1.8rem;
     text-align: center;
-    margin: 20px 0;
+
     padding: 30px;
 }
 
 .building-description {
     font-family: 'poppins';
     font-size:0.85rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     line-height: 1.2;
     padding:30px;
 }
@@ -381,7 +478,10 @@ footer {
     padding: 20px;
 }
 
-
+.building-description1 {
+    text-align: center;
+    color: #2563a8
+}
 
 .building-description2 {
     font-family: 'poppins';
@@ -389,6 +489,7 @@ footer {
     margin-bottom: 30px;
     line-height: 1.2;
     padding:30px;
+
   
 }
 
@@ -415,6 +516,7 @@ footer {
   }
   
 .carousel-container {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -425,11 +527,10 @@ footer {
 
 .background-blur {
     position: absolute;
-    top: 0;
-    left: 0;
+
     width: 100%;
     height: 100%;
-    background-image: url('../images/back.jpg');
+    background-image: url('../images/image_2/back.jpg');
     background-position: center;
     background-size: cover;
     filter: blur(8px);
@@ -438,8 +539,8 @@ footer {
   }
   
 .main-images {
-    width: 80%;
-    max-width: 800px;
+    width: 70%;
+    max-width: 1000px;
     border-radius: 8px;
     overflow: hidden;
   }
@@ -515,37 +616,36 @@ footer {
     font-family:'Poppins';
     flex: 1;
     text-align: left;
-    font-size: 14px; 
+    font-size: 13px; 
+    margin-top: 13px;
 }
 
 .material-list {
+    margin-top: 13px;
     padding-left: 20px;
 
 }
 
 .material-list li {
-    font-size: 14px;
+    margin-top: 13px;
+    font-size: 12px;
     margin-bottom: 10px;
 }
 
 
 .conclusion {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
 .image-section {
     flex: 1;
     text-align: right;
-    padding: 30px;
-}
-
-.building-image {
- 
-    max-width: 600px;
 
 }
+
+
 
 .body {
     font-family: Arial, sans-serif;
@@ -563,15 +663,20 @@ footer {
     gap: 30px;
     padding: 60px;
     justify-content: center;
+
 }
 
 .image {
     width: 250px;
     height: 250px;
     object-fit: cover;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
+
 }
 
 .image:hover {
@@ -581,11 +686,13 @@ footer {
 
 
 
+
 .video-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 100px;
   }
   
   .video-wrapper {
@@ -709,17 +816,15 @@ footer {
 
 .virtual-container {
     margin: auto;
-
     display: flex;
-
-}
-
-.virtual-container {
-    height: 700px;
+    height: 1000px;
     width: 100%;
+
 }
+
 
 .base-image {
+    margin-top: 160px;
     display: block;
     width: 100%;
     height: auto;
@@ -755,7 +860,7 @@ footer {
 
 .building-image {
     display: block;
-    width: 100%;
+    width: 700px;
     height: auto;
 }
 
@@ -765,7 +870,7 @@ footer {
     height: 16px;
     background-color: #1973ce; 
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1.3px solid white;
     cursor: pointer;
     transform: translate(-50%, -50%); 
     transition: transform 0.2s
@@ -785,8 +890,8 @@ footer {
     bottom: 120%; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: #1973ce;
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 14px;
@@ -795,7 +900,7 @@ footer {
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
     font-family: 'poppins';
-    font-size:10px;
+    font-size:13px;
 }
 
 
@@ -804,3 +909,32 @@ footer {
     visibility: visible;
     transform: translateX(-50%) translateY(-5px); 
 }
+
+
+.Explore-button {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(10, 0, 0);
+    text-decoration: none;
+    font-family: 'poppins';
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+    max-width: fit-content;
+    
+    margin-left:600px;
+    margin-top: 500px;
+    
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .arrow-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+  }

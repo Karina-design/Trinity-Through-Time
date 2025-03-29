@@ -19,8 +19,8 @@ contents.forEach((content, i) => {
 });
 }
 
-const images = ["assets/images/entrance_hall.webp", "assets/images/museum_building.webp", "assets/images/geography_building.jpg"];
-const mainimages = ["assets/images/facade1.webp", "assets/images/facade2.webp", "assets/images/acade3.webp"];
+const images = ["assets/images/image_1/image 11.jpeg", "assets/images/image_1/image 12.jpeg", "assets/images/image_1/image 13.jpeg"];
+const mainimages = ["assets/images/image_1/facade1.jpeg", "assets/images/image_1/facade2.jpeg", "assets/images/image_1/facade3.jpeg"];
 let index = 0;
 
 function showImage() {
@@ -54,48 +54,41 @@ function updateDots() {
     });
 }
 
-// Make sure this script is at the end of your body or wrapped in DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
-// Get elements
+
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 const mainImage = document.getElementById('carousel-image');
 
-// Image array - replace with your actual image paths
 const carouselImages = [
-'assets/images/image1.webp',
-'assets/images/image2.webp',
-'assets/images/image3.webp',
-'assets/images/image4.webp',
-'assets/images/image5.webp',
+'assets/images/image_1/image 3.jpeg',
+'assets/images/image_1/image 4.jpeg',
+'assets/images/image_1/image 5.jpeg',
+'assets/images/image_1/image 6.jpeg',
+'assets/images/image_1/image 7.jpeg',
 ];
 
-// Track current image
 let currentIndexImage = 0;
 
-// Function to update image
 function updateImage() {
 mainImage.src = carouselImages[currentIndexImage];
-// You can add a fade transition here if desired
+
 mainImage.classList.add('fade');
 setTimeout(() => mainImage.classList.remove('fade'), 500);
 }
 
-// Add click event for previous button
 prevButton.addEventListener('click', function() {
     currentIndexImage = (currentIndexImage - 1 + carouselImages.length) % carouselImages.length;
 updateImage();
 console.log('Previous clicked, showing image', currentIndexImage + 1);
 });
 
-// Add click event for next button
 nextButton.addEventListener('click', function() {
     currentIndexImage = (currentIndexImage + 1) % carouselImages.length;
 updateImage();
 console.log('Next clicked, showing image', currentIndexImage + 1);
 });
 
-// Initial image load
 updateImage();
 });
 
@@ -103,6 +96,15 @@ setInterval(nextImage, 3000);
 
 updateDots();
 
+
+
+window.onload = function() {
+    var iframe = document.getElementById("youtube-video");
+    var src = iframe.src;
+    iframe.src = ""; // Clear the src attribute
+    iframe.src = src; // Set it back, this will force the iframe to reload and start playing
+  };
+  
 
 
 function moveToGeography() {

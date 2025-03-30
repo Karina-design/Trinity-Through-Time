@@ -9,27 +9,29 @@
 <body>
     <div class="login_bg">
 
-    <!-- Sign Up section -->
-    <div class="container">
-        <div class="tabs">
-            <a href="#" class="active">Login</a>
-            <a href="signup.html">Signup</a>
-        </div> 
-        <h2>Login</h2>
-        
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <div id="remember">
-            <label>
-                <input type="checkbox" name="student" value="yes">
-            Remember me
-            </label>
-           
-        </div> 
-   
-    <button class="btn">Login</button>
-    </div>
+   <!-- Login section -->
+        <div class="container">
+            <div class="tabs">
+                <a href="#" class="active">Login</a>
+                <a href="signup.html">Signup</a>
+            </div>
+            <h2>Login</h2>
 
+            <!-- i Added ID attributes for JS to work -->
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+
+            <div id="remember">
+                <label>
+                    <input type="checkbox" name="student" value="yes">
+                    Remember me
+                </label>
+            </div>
+
+            <!-- i Added onclick event for login -->
+            <button class="btn" onclick="logIn(event)">Login</button>
+       </div>
+        
    <!--Footer-->
      
      <footer class="footer">
@@ -51,8 +53,27 @@
                 </div>
             </div>
         
-    </footer>
-</div>
+    </footer>    
+
+    <script>
+        function logIn(event) {
+            event.preventDefault(); // Prevent form refresh
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Retrieve stored user data
+            const storedEmail = localStorage.getItem('email');
+            const storedFirstName = localStorage.getItem('firstName');
+
+            if (email === storedEmail) {
+                alert("Login successful! Welcome, " + storedFirstName);
+                window.location.href = "profile.html"; // Redirect to profile
+            } else {
+                alert("Invalid email or password.");
+            }
+        }
+    </script>
    
 </body>
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity Through Time</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar"> <!--navigation bar--> <!--waiting on logo.png-->
+            <div class="logo"><img src="logo.png" alt="logo" width="100" height="50"></div>
+            <ul class="nav-links">
+                <li><a href="trinityhome.html">Home</a></li> <!--link the pages to the correct place-->
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="profile.html" class="profile-link">Profile</a></li>
+                <li><a href="login.html" class="login-link">Log-in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="profile-image.jpg" alt="Profile" id="profile-img">
+                    <input type="file" id="image-upload" accept="image/*" class="image-upload"
+                        onchange="previewImage(event)">
+                    <label for="image-upload" class="upload-btn">📷</label>
+                </div>
+                <h2 class="profile-title">Profile Account</h2>
+                <br>
+                <div class="name-inputs">
+                    <!-- These input fields will be populated with the values from localStorage -->
+                    <input type="text" id="first-name" class="name-input" placeholder="First Name" readonly>
+                    <input type="email" id="email" class="name-input" placeholder="Email" readonly>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn" onclick="showTab('explore')">Explore</button>
+                <button class="tab-btn" onclick="showTab('maps')">Google Maps</button>
+                <button class="tab-btn" onclick="showTab('gems')">Hidden Gems</button>
+                <button class="tab-btn" onclick="showTab('contact')">Contact Us</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="explore">
+                <h3>Explore the history and more.</h3>
+                <br>
+                <a href="explore.html" target="_blank"> <!--might need to change the link-->
+                    <img src="explore-tab.webp" alt="Trinity College front square" width="100%" height="50%" />
+                </a>
+            </div>
+            <div class="tab-content" id="maps">
+                <h3>Trinity College Campus</h3>
+                <br>
+                <a href="https://www.google.com/maps?q=Trinity+College,+Dublin" target="_blank">
+                    <img src="googlemaps.jpg" alt="google maps cartoon image" width="100%" />
+                </a>
+            </div>
+            <div class="tab-content" id="gems">
+                <h3>Discover the hidden gems</h3>
+                <br>
+                <a href="hiddengem.html" target="_blank">
+                    <img src="hiddengem-tab.jpg" alt="hidden gem image with magnifying glass" width="60%"
+                        height="50px" />
+                </a>
+            </div>
+
+            <div class="tab-content" id="contact">
+                <h3>Get in touch with us.</h3>
+                <br>
+                <a href="https://www.visittrinity.ie/contact-us/" target="_blank">
+                    <img src="contactus-tab.webp" alt="google maps cartoon image" width="100%" />
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="logo_footer.png" alt="Trinity Logo" class="footer-logo" />
+                <p>College Green, Dublin 2, Ireland</p>
+            </div>
+            <div class="footer-links">
+                <a href="trinityhome.html">Home</a>
+                <a href="#">Explore</a>
+                <a href="#">Profile</a>
+                <a href="#">Log In</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+
+</html>

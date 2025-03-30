@@ -15,21 +15,25 @@
             <a href="#" class="active">Signup</a>
         </div> 
         <h2>Create an Account</h2>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <div class="radio-group">
-            <span>Are you a student?</span>
-            <label>
-                <input type="radio" name="student" value="yes">
-            Yes
-            </label>
-            <label>
-                <input type="radio" name="student" value="no">
-            No
-            </label>
-        </div>
-        <button class="btn">Sign Up</button>
+        <form id="signup-form" onsubmit="signUp(event)">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <div class="radio-group">
+                <span>Are you a student?</span>
+                <label>
+                    <input type="radio" name="student" value="yes">
+                    Yes
+                </label>
+                <label>
+                    <input type="radio" name="student" value="no">
+                    No
+                </label>
+            </div>
+
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
     </div>
 
    <!--Footer-->

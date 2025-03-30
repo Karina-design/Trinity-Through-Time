@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore - Trinity Through Time</title>
+  <link rel="stylesheet" href="explore.css" />
+  <style>
+    /* Inline glow animation for diamond rain */
+    .diamond-shower {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .diamond-shower img {
+      position: absolute;
+      width: 30px;
+      animation: fall 1.2s linear forwards;
+    }
+
+    @keyframes fall {
+      from {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(350px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-left">
+      <a href="trinityhome.html"><img src="home-icon.png" alt="Home Icon" class="home-icon" /></a>
+    </div>
+    <div class="title-container">
+      <h1> Explore</h1>
+    </div>
+    <div class="nav-right">
+      <a href="#"><img src="explore-icon.png" alt="Explore Icon" class="explore-icon" /></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <!-- Card 1 -->
+      <div class="gem-item">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="rubricSide.jpeg" alt="Rubrics Building" />
+          </div>
+          <div class="flip-back glow">
+            <h2>Rubrics Building</h2>
+            <p>A serene place to relax and absorb the historic vibe of Trinity.</p>
+            <button class="know-more" onclick="showDiamonds(this, 'rubrics.html')">Know More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="gem-item">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="insidegeography.jpeg" alt="Geography Building" />
+          </div>
+          <div class="flip-back glow">
+            <h2>Geography Building</h2>
+            <p>Home to thousands of ancient texts with historic charm.</p>
+            <button class="know-more" onclick="showDiamonds(this, 'geography.html')">Know More</button>
+          </div>
+        </div>
+      </div>
+             <!-- Card 3 -->
+      <div class="gem-item">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img src="gmb.jpeg" alt="GMB - Graduates' Memorial Building" />
+          </div>
+          <div class="flip-back glow">
+            <h2>GMB - Graduates' Memorial Building</h2>
+            <p>Home to thousands of ancient texts with historic charm.</p>
+            <button class="know-more" onclick="showDiamonds(this, 'gmb.html')">Know More</button>
+          </div>
+        </div>
+      </div>
+
+            <!-- Card 4 -->
+            <div class="gem-item">
+                <div class="flip-inner">
+                  <div class="flip-front">
+                    <img src="belltower.jpeg" alt="bell tower" />
+                  </div>
+                  <div class="flip-back glow">
+                    <h2>Bell Tower</h2>
+                    <p>Home to thousands of ancient texts with historic charm.</p>
+                    <button class="know-more" onclick="showDiamonds(this, 'belltower.html')">Know More</button>
+                  </div>
+                </div>
+              </div>
+
+   
+    </section>
+  </main>
+  <div class="diamond-container">
+
+    <a href="hiddengems.html">
+      <img src="diamond-blue.png" alt="Diamond Logo" class="gem-logo" />
+    </a>
+
+  </div>
+
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="logo_footer.png" alt="Trinity Logo" class="footer-logo" />
+        <p>College Green, Dublin 2, Ireland</p>
+      </div>
+      <div class="footer-links">
+        <a href="trinityhome.html">Home Page</a>
+        <a href="#">Explore</a>
+        <a href="#">Profile</a>
+        <a href="#">Log In</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    function showDiamonds(button, link) {
+      const parent = button.closest(".gem-item");
+      const shower = document.createElement("div");
+      shower.className = "diamond-shower";
+  
+      for (let i = 0; i < 25; i++) {
+        const diamond = document.createElement("img");
+        diamond.src = "diamond.png";
+        diamond.style.left = `${Math.random() * 90}%`;
+        diamond.style.animationDelay = `${Math.random() * 0.5}s`;
+        diamond.style.animationDuration = `${0.8 + Math.random()}s`;
+        diamond.style.transform = `rotate(${Math.random() * 360}deg)`;
+        diamond.style.opacity = `${0.6 + Math.random() * 0.4}`;
+        shower.appendChild(diamond);
+      }
+  
+      parent.appendChild(shower);
+  
+      setTimeout(() => {
+        window.location.href = link;
+      }, 1300);
+    }
+  </script>  
+</body>
+</html>

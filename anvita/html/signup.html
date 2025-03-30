@@ -56,7 +56,9 @@
         </div>
     
 </footer>
-    function signUp(event) {
+    <script>
+        // Sign-up function to handle form submission
+        function signUp(event) {
             event.preventDefault(); // Prevent form from refreshing the page
 
 
@@ -69,18 +71,18 @@
 
 
             const firstName = nameParts[0] || '';
-            const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : ''; 
-            
-          
+            const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+
+
             localStorage.setItem('firstName', firstName);
             localStorage.setItem('email', email);
 
-           
+
             console.log('First Name:', firstName);
             console.log('Email:', email);
 
             // Redirect to profile page after successful sign-up
-            window.location.href = "profile.html";  
+            window.location.href = "profile.html";
         }
 
     </script>

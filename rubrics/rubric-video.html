@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity College Website</title>
+    <link rel="stylesheet" href="assets/css/rubric-styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="ttt.html">
+                <img class="logo" src="assets/images/logo ttt (6).png">
+            </a>
+            <div class="logo">Trinity<br>Through <br>Time</div>
+
+
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#explore">EXPLORE</a></li>
+                <li><a href="#profile">PROFILE</a></li>
+            </ul>
+            <ul class="login">
+                <a href="#LogIn">
+                    <img class="logo" src="assets/images/login_账户.png"></a>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <div class="tabs">
+            <a href="rubric-image.html" class="tab">IMAGE</a>
+            <a href="rubric-video.html" class="tab active">VIDEO</a>
+            <a href="rubric-virtual-tour.html" class="tab">VIRTUAL TOUR</a>
+        </div>
+
+        <div class="video-container">
+            <video width="1500" height="650" controls autoplay muted loop>
+                <source src="assets/images/rubric_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="building-section ">
+            <div class="building-title">
+                <h1 class="building-title">Rubric Building</h1>
+            </div>
+            <div class="building-description">
+                <p>The Rubrics Building at Trinity College Dublin is a charming, historic red-brick structure that
+                    exudes old-world character. As you enter, the narrow wooden staircases creak underfoot, leading to
+                    long, dimly lit corridors lined with thick wooden doors. Inside, cozy student rooms feature deep-set
+                    sash windows, offering picturesque views of Library Square or New Square. The scent of aged timber
+                    and the presence of original fireplaces transport visitors back in time, while the exposed wooden
+                    beams in the attic rooms add a touch of Hogwarts-like magic. Outside, the weathered red bricks glow
+                    warmly in the Dublin light, standing as a timeless reminder of Trinity’s centuries-old academic
+                    tradition.</p>
+                <br>
+                <p>The Rubrics, constructed between 1699 and 1705, stands as the oldest building on Trinity College
+                    Dublin's campus and is Ireland's longest-serving purpose-built residential structure. Attributed to
+                    architect Thomas Burgh, who also designed the Old Library, the Rubrics originally formed part of a
+                    quadrangle of red-brick residential buildings surrounding Library Square. Over the centuries, it has
+                    undergone several transformations, including the addition of a third floor in 1894. Despite these
+                    changes, the building has continuously served as residential accommodation for the university
+                    community. In 2024, after an 18-month conservation and restoration project, the Rubrics reopened to
+                    house new staff, visiting scholars, students, and a new reading room, ensuring its legacy endures
+                    for future generations. </p>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="video-container">
+            <button class="button left" onclick="changeVideo('video1')">←</button>
+
+            <div class="video-wrapper">
+                <iframe id="video-player" width="1000" height="600" src="https://www.youtube.com/embed/1lmTs3bXOq4"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
+            </div>
+
+            <button class="button right" onclick="changeVideo()">→</button>
+
+
+        </div>
+
+        <script src="assets/script/video.js"></script>
+
+        <div class="vedio-section ">
+            <div class="vedio-description">
+                <p>A cool fact about the Rubrics building at Trinity College Dublin is that it has been continuously
+                    used as student accommodation for over 300 years, making it Ireland’s longest-serving residential
+                    building with an academic purpose. Despite its age, it remains a sought-after place to live, with
+                    its red-brick charm and central location in the historic heart of the university. It even featured
+                    in the TV adaptation of Normal People, giving it a pop culture connection alongside its deep
+                    academic history!.</p>
+
+                <p>Additionally, The Rubrics is a three-story red-brick building dating back to 1699-1705, with an
+                    additional floor added in 1894. Given its approximate dimensions, it likely contains hundreds of
+                    thousands of bricks. A standard 17th-century brick size in Ireland would have been roughly 9 inches
+                    (length) × 4.5 inches (width) × 2.5 inches (height), with mortar joints between them. Using
+                    estimates from similar historical buildings, the total could range between 500,000 to 1,000,000
+                    bricks.</p>
+
+            </div>
+        </div>
+
+        <div class="interviews-container">
+            <div class="interviews-title">
+                <h1 class="interviews-title">Interviews</h1>
+            </div>
+            <div class="shorts-wrapper" id="shortsWrapper">
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/2ysiXqe5AoA" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title">Top Things To Do On Campus </div>
+                </div>
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/FqpDK-2CyYk" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title">Trinity Tour</div>
+                </div>
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/qQ_sZR1f0ts" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title">A Staff Guided Tour</div>
+                </div>
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/DGoZrZEbGSE" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title">Top Facts About Trinity</div>
+                </div>
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/SknagaudMks" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title"> A Hidden Gem</div>
+                </div>
+
+            </div>
+            <button class="nav-button nav-right" onclick="scrollRight()">❯</button>
+        </div>
+
+        <script src="assets/script/rubric-video.js"></script>
+
+        <footer>
+            <p>College Green, Dublin 2, Ireland</p>
+            <p>Meet the Creators: Aviva | Robyn | Karina | Xinyu | Morgan | Oscar</p>
+        </footer>
+
+
+    </body>
+
+</html>

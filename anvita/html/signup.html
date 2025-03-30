@@ -56,6 +56,34 @@
         </div>
     
 </footer>
+    function signUp(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value; // You should hash this password before saving it
+
+
+            const nameParts = name.split(' ');
+
+
+            const firstName = nameParts[0] || '';
+            const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : ''; 
+            
+          
+            localStorage.setItem('firstName', firstName);
+            localStorage.setItem('email', email);
+
+           
+            console.log('First Name:', firstName);
+            console.log('Email:', email);
+
+            // Redirect to profile page after successful sign-up
+            window.location.href = "profile.html";  
+        }
+
+    </script>
   
    
 </body>

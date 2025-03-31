@@ -5,36 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hidden Gems - Trinity Through Time</title>
   <link rel="stylesheet" href="hiddengems.css" />
-  <style>
-    /* Inline glow animation for diamond rain */
-    .diamond-shower {
-      position: absolute;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 10;
-    }
-
-    .diamond-shower img {
-      position: absolute;
-      width: 30px;
-      animation: fall 1.2s linear forwards;
-    }
-
-    @keyframes fall {
-      from {
-        transform: translateY(-100px) rotate(0deg);
-        opacity: 1;
-      }
-      to {
-        transform: translateY(350px) rotate(360deg);
-        opacity: 0;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -52,88 +22,89 @@
 
   <main>
     <section class="gallery">
-      <!-- Card 1 -->
-      <div class="gem-item">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <img src="image1.png" alt="Main Quad" />
-          </div>
-          <div class="flip-back glow">
-            <h2>Main Quad</h2>
-            <p>A serene place to relax and absorb the historic vibe of Trinity.</p>
-            <button class="know-more" onclick="showDiamonds(this, 'mainquad.html')">Know More</button>
-          </div>
-        </div>
-      </div>
+   <!-- CARD 1 -->
+<div class="gem-item">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="image1.png" alt="Main Quad" />
+    </div>
+    <div class="flip-back glow">
+      <h2>Main Quad</h2>
+      <p>A serene place to relax and absorb the historic vibe of Trinity.</p>
+      <button class="know-more" onclick="showDiamonds(this, 'https://maps.google.com/?q=Main+Quad,+Trinity+College+Dublin')">Navigate</button>
+    </div>
+  </div>
+</div>
 
-      <!-- Card 2 -->
-      <div class="gem-item">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <img src="image2.png" alt="Library" />
-          </div>
-          <div class="flip-back glow">
-            <h2>Long Room Library</h2>
-            <p>Home to thousands of ancient texts with historic charm.</p>
-            <button class="know-more" onclick="showDiamonds(this, 'library.html')">Know More</button>
-          </div>
-        </div>
-      </div>
-             <!-- Card 3 -->
-      <div class="gem-item">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <img src="image3.png" alt="Library" />
-          </div>
-          <div class="flip-back glow">
-            <h2>Long Room Library</h2>
-            <p>Home to thousands of ancient texts with historic charm.</p>
-            <button class="know-more" onclick="showDiamonds(this, 'library.html')">Know More</button>
-          </div>
-        </div>
-      </div>
+<!-- CARD 2 -->
+<div class="gem-item">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="image2.png" alt="Long Room Library" />
+    </div>
+    <div class="flip-back glow">
+      <h2>Long Room Library</h2>
+      <p>Home to thousands of ancient texts with historic charm.</p>
+      <button class="know-more" onclick="showDiamonds(this, 'https://maps.google.com/?q=Long+Room+Library,+Trinity+College+Dublin')">Navigate</button>
+    </div>
+  </div>
+</div>
 
-            <!-- Card 4 -->
-            <div class="gem-item">
-                <div class="flip-inner">
-                  <div class="flip-front">
-                    <img src="image4.png" alt="Library" />
-                  </div>
-                  <div class="flip-back glow">
-                    <h2>Long Room Library</h2>
-                    <p>Home to thousands of ancient texts with historic charm.</p>
-                    <button class="know-more" onclick="showDiamonds(this, 'library.html')">Know More</button>
-                  </div>
-                </div>
-              </div>
+<!-- CARD 3 -->
+<div class="gem-item">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="image3.png" alt="Campanile Bell Tower" />
+    </div>
+    <div class="flip-back glow">
+      <h2>Campanile Bell Tower</h2>
+      <p>A legendary tower where superstition meets tradition. Avoid walking under it when the bell tolls!</p>
+      <button class="know-more" onclick="showDiamonds(this, 'https://maps.google.com/?q=Campanile,+Trinity+College+Dublin')">Navigate</button>
+    </div>
+  </div>
+</div>
 
-    <!-- Card 5 -->
-      <div class="gem-item">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <img src="image1.png" alt="Library" />
-          </div>
-          <div class="flip-back glow">
-            <h2>Long Room Library</h2>
-            <p>Home to thousands of ancient texts with historic charm.</p>
-            <button class="know-more" onclick="showDiamonds(this, 'library.html')">Know More</button>
-          </div>
-        </div>
-      </div>
+<!-- CARD 4 -->
+<div class="gem-item">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="image4.png" alt="Secret Garden" />
+    </div>
+    <div class="flip-back glow">
+      <h2>Secret Garden</h2>
+      <p>A quiet, tucked-away green space ideal for reading, relaxing, or clearing your mind.</p>
+      <button class="know-more" onclick="showDiamonds(this, 'https://maps.google.com/?q=Trinity+College+Secret+Garden+Dublin')">Navigate</button>
+    </div>
+  </div>
+</div>
 
-    <!-- Card 6 -->
-      <div class="gem-item">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <img src="image2.png" alt="Library" />
-          </div>
-          <div class="flip-back glow">
-            <h2>Long Room Library</h2>
-            <p>Home to thousands of ancient texts with historic charm.</p>
-            <button class="know-more" onclick="showDiamonds(this, 'library.html')">Know More</button>
-          </div>
-        </div>
-      </div>
+<!-- CARD 5 -->
+<div class="gem-item">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="image1.png" alt="Douglas Hyde Gallery" />
+    </div>
+    <div class="flip-back glow">
+      <h2>Douglas Hyde Gallery</h2>
+      <p>A hidden gem for modern art lovers, located inside Trinity’s campus.</p>
+      <button class="know-more" onclick="showDiamonds(this, 'https://maps.google.com/?q=Douglas+Hyde+Gallery,+Trinity+College+Dublin')">Navigate</button>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 6 -->
+<div class="gem-item">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="image2.png" alt="Reading Nook" />
+    </div>
+    <div class="flip-back glow">
+      <h2>Reading Nook</h2>
+      <p>Shaded corners scattered across campus where students unwind and reflect between classes.</p>
+      <button class="know-more" onclick="showDiamonds(this, 'https://maps.google.com/?q=Reading+Area,+Trinity+College+Dublin')">Navigate</button>
+    </div>
+  </div>
+</div>
 
     </section>
   </main>
@@ -161,7 +132,7 @@
       const parent = button.closest(".gem-item");
       const shower = document.createElement("div");
       shower.className = "diamond-shower";
-  
+
       for (let i = 0; i < 25; i++) {
         const diamond = document.createElement("img");
         diamond.src = "diamond.png";
@@ -172,13 +143,13 @@
         diamond.style.opacity = `${0.6 + Math.random() * 0.4}`;
         shower.appendChild(diamond);
       }
-  
+
       parent.appendChild(shower);
-  
+
       setTimeout(() => {
-        window.location.href = link;
+        window.open(link, "_blank");
       }, 1300);
     }
-  </script>  
+  </script>
 </body>
 </html>

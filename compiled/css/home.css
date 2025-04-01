@@ -271,7 +271,7 @@ font-size: 2.8rem;
     background: rgba(0, 0, 0, 0.7);
     padding: 40px;
     border-radius: 10px;
-    width: 28rem;
+    max-width: 28rem;
 }
 
 form {

@@ -1,3 +1,6 @@
+/* Custom Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -18,174 +21,16 @@ body {
 }
 
 
-.navbar {
-    display: flex;
-    height: 110px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
+/* Navbar */
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 100px;
-    margin: 0 auto;
-    padding-left: px;
-}
+.navbar-nav .nav-link:hover {
+    color: #c0392b;
+    transform: translateY(-2px);
+  }
 
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #196cd2;
+.navbar-nav .nav-link.active {
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    color: darkred;
-}
-
-#hero {
-    height: 100vh;
-    background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-}
-
-.hero-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('trinity.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-}
-
-.circle-button {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #9d0000;
-    border: 2px solid #196cd2;
-    font-size: 14px;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    text-align: center, center;
-    line-height: 30px;
-    z-index: 100;
-    cursor: pointer;
-}
-
-
-
-.login-link:hover {
-    color: darkred;
-
-}
-
-#history {
-    height: 100vh;
-    background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-
-
-.history-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('trinitybackground.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-}
-
-#history h2 {
-    padding-right: 900px;
-    padding-bottom: 500px;
-    color: #fff;
-    font-size: 50px;
-    margin-left: 30px;
-    margin-bottom: 20px;
-    position: absolute;
-    z-index: 2;
-
-}
-
-#history p {
-    color: #fff;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    padding-left: 0;
-    padding-right: 920px;
-    margin-left: 30px;
-    margin-top: 100px;
-    margin-bottom: 180px;
-    z-index: 2;
-}
-
-.round-button {
-    position: absolute;
-    width: 150px;
-    height: 50px;
-    border-radius: 5px;
-    background-color: #9d0000;
-    border: 2px solid #196cd2;
-    font-size: 14px;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    text-align: center;
-    line-height: 30px;
-    z-index: 100;
-    cursor: pointer;
-}
-
-
-#features {
-    padding: 50px;
-    text-align: center;
-    background-color: white;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    max-width: 800px;
-    margin: auto;
-}
-
-.feature-item {
-    background-color: gray;
-    padding: 40px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.feature-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
+  }
 
 #contact {
     background-color: black;
@@ -213,15 +58,23 @@ form input {
 }
 
 
-footer {
-    background-color: #196cd2;
-    position: absolute;
-    right: 0px;
-    left: 0px;
+/* Footer */
+.footer {
+    background-color: #0569B9;
     color: white;
-    padding: 20px;
-    text-align: center;
+    width: 100%;    
 }
+
+.footer .footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer .footer-link:hover {
+    text-decoration: underline;
+}
+
 
 .tabs {
     display: flex;
@@ -232,6 +85,7 @@ footer {
     flex: 1;
     padding: 12px;
     text-align: center;
+    text-decoration: none;
     cursor: pointer;
     font-family: 'Poppins';
     font-size: 14px;
@@ -259,7 +113,7 @@ footer {
 
 
 .content {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
     border: 1px solid #ccc;
     padding: 20px;
     display: none;
@@ -345,16 +199,16 @@ footer {
 }
 
 .dot.active {
-    background-color: #1a73e8;
+    background-color: #196cd2;
 }
 
 .building-title {
     color: #2563a8;
-    font-family: 'Palatino', sans-serif;
-    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.8rem;
     text-align: center;
+    text-decoration: none;
     margin: 20px 0;
-
 }
 
 .materials-title {
@@ -562,8 +416,8 @@ footer {
 }
 
 .building-title {
-    text-decoration: underline;
-    color: #0066cc;
+    text-decoration: none;
+    color: #196cd2;
 }
 
 .image-gallery {
@@ -605,7 +459,7 @@ footer {
 }
 
 .button {
-    background-color: #1a73e8;
+    background-color: #196cd2;
     color: white;
     font-size: 2rem;
     border: inherit;
@@ -695,8 +549,8 @@ footer {
 }
 
 .interviews-title {
-    color: #2563a8;
-    font-family: 'Palatino', sans-serif;
+    color: #196cd2;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.8rem;
     text-align: center;
     margin: 20px auto;
@@ -773,7 +627,7 @@ footer {
     position: absolute;
     width: 16px;
     height: 16px;
-    background-color: #1973ce;
+    background-color: #196cd2;
     border-radius: 50%;
     border: 1px solid white;
     cursor: pointer;

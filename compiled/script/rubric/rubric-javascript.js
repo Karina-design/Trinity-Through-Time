@@ -19,8 +19,8 @@ function toggleContent(index) {
     });
 }
 
-const images = ["assets/images/rubrics1.jpeg", "assets/images/rubricfront.jpeg", "assets/images/rubricdoor.jpeg"];
-const mainimages = ["assets/images/facade1.webp", "assets/images/facade2.webp", "assets/images/facade3.webp"];
+const images = ["../../assets/rubric/rubrics1.jpeg", "../../assets/rubric/rubricfront.jpeg", "../../assets/rubric/rubricdoor.jpeg"];
+const mainimages = ["../../assets/rubric/facade1.webp", "../../assets/rubric/facade2.webp", "../../assets/rubric/facade3.webp"];
 let index = 0;
 
 function showImage() {
@@ -63,11 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Image array - replace with your actual image paths
     const carouselImages = [
-        'assets/images/rubricSide.jpeg',
-        'assets/images/rubricdoor(2).jpeg',
-        'assets/images/rubricRoof.jpeg',
-        'assets/images/brickwall.jpeg',
-        'assets/images/brickwall(2).jpeg',
+        '../../assets/rubric/rubricSide.jpeg',
+        '../../assets/rubric/rubricdoor(2).jpeg',
+        '../../assets/rubric/rubricRoof.jpeg',
+        '../../assets/rubric/brickwall.jpeg',
+        '../../assets/rubric/brickwall(2).jpeg',
     ];
 
     // Track current image

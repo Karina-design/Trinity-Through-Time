@@ -55,34 +55,34 @@
 
     <div class="login_bg">
         <!-- Settings Section -->
-        <div class="container">
+        <div class="container-bg">
             <!-- Header with only "Settings" -->
             <div class="tabs">
-                <a href="#" class="active" id="settings-title">Settings</a>
+               <h2><a href="#" class="active" id="settings-title" style="text-decoration: none; color: #c0392b;">Settings</a></h2> 
             </div> 
 
             <!-- Language Section (now with flags next to the language options) -->
             <div class="settings-option">
-                <button class="btn language-btn" onclick="toggleLanguageSelect();">Language</button>
+                <button class="btn language-btn" onclick="toggleLanguageSelect();"><p class="h5">Language</p><i class="bi bi-chevron-compact-down px-2"></i></button>
                 <div id="language-select" class="language-dropdown">
                     <ul>
-                        <li><button onclick="changeLanguage('en');">English</button></li>
-                        <li><button onclick="changeLanguage('es');">Español</button></li>
-                        <li><button onclick="changeLanguage('de');">German</button></li>
-                        <li><button onclick="changeLanguage('hi');">Hindi</button></li>
-                        <li><button onclick="changeLanguage('ga');">Gaelic</button></li>
+                        <li><button class="btn btn-outline-light" onclick="changeLanguage('en');">English</button></li>
+                        <li><button class="btn btn-outline-light " onclick="changeLanguage('es');">Español</button></li>
+                        <li><button class="btn btn-outline-light" onclick="changeLanguage('de');">German</button></li>
+                        <li><button class="btn btn-outline-light" onclick="changeLanguage('hi');">Hindi</button></li>
+                        <li><button class="btn btn-outline-light" onclick="changeLanguage('ga');">Gaelic</button></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Profile Button -->
             <div class="settings-option">
-                <button class="btn profile-btn" id="profile-btn"><a href="profile.html">Profile</a></button>
+                <button class="btn profile-btn" id="profile-btn"><a href="profile.html" style="text-decoration: none; color: white;"><p class="h5">Profile</p></a></button>
             </div>
 
             <!-- Log Out Button -->
             <div class="settings-option">
-                <button class="btn log-out-btn" id="log-out-btn" onclick="logOut();"><a href="trinityhome.html">Logout</a></button>
+                <button class="btn log-out-btn rounded-pill  py-2 px-5" id="log-out-btn" onclick="logOut();">Logout</button>
             </div>
         </div>
     </div>

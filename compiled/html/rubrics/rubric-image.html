@@ -69,8 +69,8 @@
 
 
     <div class="content_active">
-        <img id="slideshow" src="../../assets/rubric/rubrics1.jpeg " alt="Slideshow Image">
-        <div class="TrinityCollegeDublin"> TRINITY COLLEGE DUBLIN
+        <img id="slideshow"  src="../../assets/rubric/rubrics1.jpeg " alt="Slideshow Image">
+        <div class="TrinityCollegeDublin"> 
             <div class="geography">
                 <button onclick="moveToGeography()">THE RUBRICS BUILDING </button>
             </div>
@@ -177,15 +177,17 @@
         </div>
     </div>
 
+    
     <div class="container">
         <div class="building-container">
             <br>
         </div>
-
-        <h1 class="materials-title">Materials</h1>
-
-        <div class="content">
-            <div class="text-section">
+    
+        <h1 class="materials-title text-center">Materials</h1>
+    
+        <div class="row align-items-center px-2">
+            <!-- Text Section -->
+            <div class="col-lg-6 col-md-12">
                 <p class="intro">
                     The Geography Building at Trinity College Dublin is constructed using a combination of traditional
                     and modern materials, reflecting both its historical setting and functional purpose. The primary
@@ -195,14 +197,14 @@
                     <li><strong>Red Brick</strong> – The primary construction material, giving the building its
                         distinctive appearance. These bricks were likely handmade and fired using local clay, a common
                         practice in 17th-century Dublin.</li>
-                    <li><strong>Limestone</strong>– Used for structural elements such as window sills, door surrounds,
+                    <li><strong>Limestone</strong> – Used for structural elements such as window sills, door surrounds,
                         and foundation reinforcements. Irish limestone was widely used in historic buildings for its
                         strength and availability.</li>
                     <li><strong>Slate Roof</strong> – The roof is covered with slate tiles, which were commonly sourced
                         from Irish quarries. Slate provides weather resistance and longevity.</li>
                     <li><strong>Timber</strong> – Used extensively in the interior for flooring, staircases, doors, and
                         roof structures. Oak and pine were commonly used, offering durability and stability.</li>
-                    <li><strong>Wrought Iron</strong>– Found in some decorative elements, such as railings and window
+                    <li><strong>Wrought Iron</strong> – Found in some decorative elements, such as railings and window
                         fastenings, adding both function and ornamentation.</li>
                 </ol>
                 <p class="conclusion">
@@ -210,49 +212,64 @@
                     damp climate, ensuring the Rubrics' long-term preservation.
                 </p>
             </div>
+    
+           <!-- Image Section -->
+<div class="col-lg-6 col-md-12 text-center position-relative">
+    <img src="../../assets/rubric/rubric_materials.jpg" alt="Geography Building" class="img-fluid building-image">
 
-            <div class="image-section">
-                <img src="../../assets/rubric/rubric_materials.jpg" alt="Geography Building" class="building-image">
-                <!-- Material Buttons -->
-                <div class="material-point" style="top: 30%; left: 45%;" data-material="Red Brick"></div>
-                <div class="material-point" style="top: 41%; left: 56%;" data-material="Limestone"></div>
-                <div class="material-point" style="top: 48%; left: 72%;" data-material="Slate Roof"></div>
-                <div class="material-point" style="top: 44%; left: 62%;" data-material="Wrought Iron"></div>
-                <div class="material-point" style="top: 30%; left: 50%;" data-material="Timber"></div>
+    <!-- Material Dots -->
+    <div class="material-point position-absolute" style="top: 30%; left: 45%;" data-material="Red Brick"></div>
+    <div class="material-point position-absolute" style="top: 41%; left: 56%;" data-material="Limestone"></div>
+    <div class="material-point position-absolute" style="top: 48%; left: 72%;" data-material="Slate Roof"></div>
+    <div class="material-point position-absolute" style="top: 44%; left: 62%;" data-material="Wrought Iron"></div>
+    <div class="material-point position-absolute" style="top: 30%; left: 50%;" data-material="Timber"></div>
+</div>
+</div>
+    </div>
+    
 
+    <div class="container my-5">
+        <!-- Section Title -->
+        <div class="text-center">
+            <h1 class="building-title">Fun Facts</h1>
+        </div>
+    
+        <!-- Image Gallery -->
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="position-relative">
+                    <img src="../../assets/rubric/DYK1.png" class="img-fluid rounded" 
+                        alt="The Leaning Tower of Trinity? – Over the centuries, the building has slightly shifted due to settling, leading some students to joke that it’s Dublin’s version of the Leaning Tower of Pisa—just much slower and far less dramatic.">
+                </div>
             </div>
-
+            <div class="col-md-6 col-lg-3">
+                <div class="position-relative">
+                    <img src="../../assets/rubric/didyouknow(2).png" class="img-fluid rounded" 
+                        alt="Alumni and Scholars: Trinity College has produced many prominent figures in various fields, including Oscar Wilde, Samuel Beckett, Douglas Hyde (Ireland’s first president), and Ernest Walton, who was a co-winner of the Nobel Prize in Physics in 1951">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="position-relative">
+                    <img src="../../assets/rubric/didyouknow(3).png" class="img-fluid rounded" 
+                        alt="The Campanile and the Famous Tradition: The Trinity College Campanile is a landmark bell tower located at the heart of the campus. A well-known campus tradition involves students not walking under the Campanile, as it is believed to be bad luck — said to bring an early death or misfortune to anyone who does.">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="position-relative">
+                    <img src="../../assets/rubric/didyouknow(4).png" class="img-fluid rounded" 
+                        alt="Historic Library and the Book of Kells: The college is home to the famous Trinity College Library, which houses the Book of Kells, a beautifully illuminated manuscript of the Four Gospels dating from around the 9th century. It is one of Ireland’s most visited tourist attractions and a key part of the college's rich history.">
+                </div>
+            </div>
         </div>
     </div>
-
-
-    <div class="building-title">Did You Know?</h1>
-    </div>
-    <div class="building-description1">
-
-    </div>
-    <div class="image-gallery">
-        <img src="../../assets/rubric/DYK1.png"
-            alt="The Leaning Tower of Trinity? – Over the centuries, the building has slightly shifted due to settling, leading some students to joke that it’s Dublin’s version of the Leaning Tower of Pisa—just much slower and far less dramatic."
-            class="image">
-        <img src="../../assets/rubric/didyouknow(2).png"
-            alt="Alumni and Scholars: Trinity College has produced many prominent figures in various fields, including Oscar Wilde, Samuel Beckett, Douglas Hyde (Ireland’s first president), and Ernest Walton, who was a co-winner of the Nobel Prize in Physics in 1951"
-            class="image">
-        <img src="../../assets/rubric/didyouknow(3).png"
-            alt="The Campanile and the Famous Tradition: The Trinity College Campanile is a landmark bell tower located at the heart of the campus. A well-known campus tradition involves students not walking under the Campanile, as it is believed to be bad luck — said to bring an early death or misfortune to anyone who does."
-            class="image">
-        <img src="../../assets/rubric/didyouknow(4).png"
-            alt="Historic Library and the Book of Kells: The college is home to the famous Trinity College Library, which houses the Book of Kells, a beautifully illuminated manuscript of the Four Gospels dating from around the 9th century. It is one of Ireland’s most visited tourist attractions and a key part of the college's rich history."
-            class="image">
-    </div>
-
+    
 
 
   <!-- Footer -->
   <footer class="footer p-5">   
     <div class="row">
         <div class="col-md-2 text-start"><a href="trinityhome.html">
-            <img src="../assets/logo_white-02.png" alt="trinity through time logo" width="100" height="100" class="footer-logo">
+            <img src="../../assets/logo_white-02.png" alt="trinity through time logo" width="100" height="100" class="footer-logo">
         </a></div>
         <div class="col-md-4">
             <p class="mb-4">College Green, Dublin 2, Ireland</p>

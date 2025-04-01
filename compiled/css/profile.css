@@ -67,11 +67,11 @@ body::before {
 }
 
 .profile-card {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.575);
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30rem;
-    height: 40rem;
+   
     padding: 20px;
     margin-bottom: 30px;
     text-align: center;
@@ -128,7 +128,7 @@ body::before {
     font-weight: bold;
     margin-top: 10px;
     font-family: 'Times New Roman', Times, serif;
-    color: #196cd2;
+    color: white;
 }
 
 /* Name Input Styles */
@@ -151,7 +151,7 @@ body::before {
     display: flex;
     justify-content: space-around;
     gap: 2px;
-    margin: 10px 0;
+    margin-top: 3rem;
 }
 
 .tab-btn {
@@ -167,7 +167,7 @@ body::before {
 }
 
 .tab-btn:hover {
-    background-color: #2894ffb4;
+    background-color: #9d0000;
     border-radius: 5px;
 }
 
@@ -191,7 +191,7 @@ body::before {
 .sign-out-btn {
     width: 100%;
     padding: 10px;
-    background-color: #e74c3c;
+    background-color: #9d0000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -199,7 +199,11 @@ body::before {
 }
 
 .sign-out-btn:hover {
-    background-color: #c0392b;
+    background-color: #9d0000;
+}
+
+.tab-content h3{
+    color: white;
 }
 
 /* Footer */
@@ -219,3 +223,12 @@ body::before {
     text-decoration: underline;
 }
 
+.btn.btn-primary{
+    background-color: #196cd2;
+   width: 80%;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn.btn-primary:hover {
+    background-color: #9d0000;
+    width: 80%;
+}

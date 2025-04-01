@@ -1,5 +1,5 @@
 /* Button for Language Selection */
-.language-btn {
+.btn.language-btn {
     background-color: #0569B9; /* Blue background */
     color: white;
     padding: 12px 20px;
@@ -12,12 +12,12 @@
     text-align: left;
 }
 
-.language-btn:hover {
+.btn.language-btn:hover {
     background-color: #DC281E; /* Red hover effect */
 }
 
 /* Dropdown menu for language selection */
-.language-dropdown {
+.btn.language-dropdown {
     display: none;
     position: absolute; /* To overlap other elements */
     top: 50px; /* Adjust if needed */
@@ -27,19 +27,19 @@
     z-index: 10;
 }
 
-.language-dropdown ul {
+.btn.language-dropdown ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.language-dropdown li {
+.btn.language-dropdown li {
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.language-dropdown button {
+.btn.language-dropdown button {
     background-color: #fff;
     color: #0569B9;
     border: none;
@@ -53,13 +53,13 @@
     align-items: center;
 }
 
-.language-dropdown button:hover {
+.btn.language-dropdown button:hover {
     background-color: #0569B9;
     color: white;
 }
 
 /* Show dropdown when language button is clicked */
-.language-btn.active + .language-dropdown {
+.btn.language-btn.active + .language-dropdown {
     display: block;
 }
 
@@ -78,37 +78,30 @@
     color: #555;
 }
 
-.btn {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-}
 
-.profile-btn {
+
+.btn.profile-btn {
     background-color: #0569B9; /* Blue background */
     color: white;
+    text-decoration: none;
 }
 
-.profile-btn:hover {
+.btn.profile-btn:hover {
     background-color: #DC281E; /* Red hover effect */
 }
 
-.log-out-btn {
+.btn.log-out-btn {
     background-color: #DC281E; /* Red background */
     color: white;
 }
 
-.log-out-btn:hover {
-    background-color: #0569B9; /* Blue hover effect */
+.btn.log-out-btn:hover {
+    background-color: #af1e16; /* Blue hover effect */
 }
 
 /* Sign up/login background */
 .login_bg {
-    background: url('../images/login_pg.webp') no-repeat center center/cover; /* Adjust the path to your image */
+    background: url('../assets/login_pg.webp') no-repeat center center/cover; /* Adjust the path to your image */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,4 +124,32 @@
     margin: 50px;
     position: relative;
     z-index: 10; /* Ensures the form stays above the background */
+}
+
+/* Navbar */
+
+.navbar-nav .nav-link:hover {
+    color: #c0392b;
+    transform: translateY(-2px);
+  }
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+  }
+
+/* Footer */
+.footer {
+    background-color: #0569B9;
+    color: white;
+    width: 100%;    
+}
+
+.footer .footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer .footer-link:hover {
+    text-decoration: underline;
 }

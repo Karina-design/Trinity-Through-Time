@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Settings - Trinity Through Time</title>
+    <link href="../css/settings.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+       
+</head>
+<body>
+     <!-- Navigation bar -->
+    <!-- The navigation bar is sticky and will remain at the top of the page when scrolling -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> <!-- Navigation bar -->
+        <div class="container-fluid">
+            <a class="navbar-brand py-3 px-5" href="trinityhome.html">
+                <img src="../assets/logo.png" alt="Trinity through Time Logo" width="110" height="45">
+            </a>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-4"><a href="trinityhome.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item px-4"><a href="explorepage.html" class="nav-link">Explore</a></li>
+                    <li class="nav-item px-4"><a href="profile.html" class="nav-link">Profile</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-light ms-auto px-5 d-none d-lg-block" id="logoutBtn">
+                Logout <i class="bi bi-box-arrow-right"></i>
+            </button>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Side menu will appear when button is clicked -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="trinityhome.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="explorepage.html">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="login_bg">
+        <!-- Settings Section -->
+        <div class="container">
+            <!-- Header with only "Settings" -->
+            <div class="tabs">
+                <a href="#" class="active" id="settings-title">Settings</a>
+            </div> 
+
+            <!-- Language Section (now with flags next to the language options) -->
+            <div class="settings-option">
+                <button class="btn language-btn" onclick="toggleLanguageSelect();">Language</button>
+                <div id="language-select" class="language-dropdown">
+                    <ul>
+                        <li><button onclick="changeLanguage('en');">English</button></li>
+                        <li><button onclick="changeLanguage('es');">Español</button></li>
+                        <li><button onclick="changeLanguage('de');">German</button></li>
+                        <li><button onclick="changeLanguage('hi');">Hindi</button></li>
+                        <li><button onclick="changeLanguage('ga');">Gaelic</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Profile Button -->
+            <div class="settings-option">
+                <button class="btn profile-btn" id="profile-btn"><a href="profile.html">Profile</a></button>
+            </div>
+
+            <!-- Log Out Button -->
+            <div class="settings-option">
+                <button class="btn log-out-btn" id="log-out-btn" onclick="logOut();"><a href="trinityhome.html">Logout</a></button>
+            </div>
+        </div>
+    </div>
+
+         <!-- Footer -->
+    <footer class="footer p-5">   
+        <div class="row">
+            <div class="col-md-2 text-start"><a href="trinityhome.html">
+                <img src="../assets/logo_white-02.png" alt="trinity through time logo" width="100" height="100" class="footer-logo">
+            </a></div>
+            <div class="col-md-4">
+                <p class="mb-4">College Green, Dublin 2, Ireland</p>
+                <p class="mb-3"><a href="tel:+11111111110" class="footer-link">(111) 111-1110</a></p>
+                <p class="mb-2"><a href="mailto:ttt@gmail.com" class="footer-link">ttt@gmail.com</a></p>
+            </div>
+            <div class="col-md-3">
+                <p class="mb-2"><a href="explorepage.html" class="footer-link">Explore</a></p>
+                <p class="mb-2"><a href="profile.html" class="footer-link">Profile</a></p>
+                <p class="mb-2"><a href="settings.html" class="footer-link">Settings</a></p>
+            </div>
+            <div class="col-md-3">
+                <p class="mb-2"><a href="trinityhome.html" class="footer-link">Home Page</a></p>
+                <p class="mb-2"><a href="signup.html" class="footer-link">Sign Up</a></p>
+                <p class="mb-2"><a href="login.html" class="footer-link">Log In</a></p>
+                <br>
+                <small>&copy; 2025 All rights reserved.</small>
+            </div>
+        </div>
+    
+    </footer>
+      
+  
+
+    <script src="../script/settings.js"></script>
+</body>
+</html>

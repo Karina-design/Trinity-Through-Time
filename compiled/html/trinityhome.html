@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity College Website</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <!-- The navigation bar is sticky and will remain at the top of the page when scrolling -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> <!-- Navigation bar -->
+        <div class="container-fluid">
+            <a class="navbar-brand py-3 px-5" href="trinityhome.html">
+                <img src="../assets/logo.png" alt="Trinity through Time Logo" width="110" height="45">
+            </a>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-4"><a href="trinityhome.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item px-4"><a href="#explore" class="nav-link">Explore</a></li>
+                    <li class="nav-item px-4"><a href="profile.html" class="nav-link">Profile</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-light ms-auto px-5 d-none d-lg-block" id="logoutBtn">
+                Logout <i class="bi bi-box-arrow-right"></i>
+            </button>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Side menu will appear when button is clicked -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="trinityhome.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#explore">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+
+<!-- Hero section -->
+<section class="container-fluid">
+    <div class="history-image"></div>
+</section>   
+<div id="hero" class="container-fluid">
+
+        <div class="hero-image"></div>
+        <button class="circle-button" style="top: 450px; left: 350px;">1</button>
+       
+        <button class="circle-button" style="top: 350px; left: 980px;">2</button>
+        <button class="circle-button" style="top: 370px; right: 80px;">3</button>
+        <button class="circle-button" style="top: 400px; left: 60px;">4</button>
+
+    </div>
+
+  
+
+      <!-- History Section -->
+      <section id="history" class="container-fluid py-5 history-image">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center text-lg-start p-5">
+                <h2>History of Trinity College Dublin</h2>
+                <p>
+                    Founded in 1592, Trinity College Dublin is Ireland’s oldest university and a beacon of academic excellence. Its iconic Long Room Library houses some of the world’s most treasured manuscripts, including the renowned Book of Kells. Situated in the heart of Dublin, Trinity seamlessly blends historic charm with modern innovation, offering a dynamic environment for learning and discovery.
+                </p>
+              <button type="button" class="btn btn-primary rounded-pill  py-2 px-5"><a href="explore.html" class="text-white text-decoration-none">Learn More</a></button>
+            </div>
+            <div class="col-lg-6">
+                <div id="historyCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../assets/longroom.jpeg" class="d-block w-100" alt="Long Room Library">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/image2.jpg" class="d-block w-100" alt="Trinity College">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/image3.webp" class="d-block w-100" alt="Campus View">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#historyCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#historyCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+<!-- Features Section -->
+<section id="features" class="container">
+    <h2 class="text-center mb-4">Features</h2>
+    <div class="row g-4 justify-content-center ">
+        <div class="col-8 col-md-5">
+            <a href="https://www.visittrinity.ie/trinity-trails/" 
+               class="feature-item position-relative text-white text-decoration-none rounded overflow-hidden">
+                <div class="feature-overlay"></div>
+                <img src="../assets/trinitytrails.webp" class="feature-img" alt="Trinity Trails">
+                <h5 class="position-absolute top-50 start-50 translate-middle text-white">Trinity Trails</h5>
+            </a>
+        </div>
+        <div class="col-8 col-md-5">
+            <a href="https://www.visittrinity.ie/book-of-kells-experience/" 
+               class="feature-item position-relative text-white text-decoration-none rounded overflow-hidden">
+                <div class="feature-overlay"></div>
+                <img src="../assets/bookofkells.jpg" class="feature-img" alt="Book of Kells Tour">
+                <h5 class="position-absolute top-50 start-50 translate-middle text-white">Book of Kells Tour</h5>
+            </a>
+        </div>
+        <div class="col-8 col-md-5">
+            <a href="https://www.visittrinity.ie/stay/" 
+               class="feature-item position-relative text-white text-decoration-none rounded overflow-hidden">
+                <div class="feature-overlay"></div>
+                <img src="../assets/staytrinity.webp" class="feature-img" alt="Stay at Trinity">
+                <h5 class="position-absolute top-50 start-50 translate-middle text-white">Stay at Trinity</h5>
+            </a>
+        </div>
+        <div class="col-8 col-md-5">
+          
+            <a href="explore.html" 
+               class="feature-item position-relative text-white text-decoration-none rounded overflow-hidden">
+                <div class="feature-overlay"></div>
+                <img src="../assets/explore.jpg" class="feature-img" alt="Explore">
+                <h5 class="position-absolute top-50 start-50 translate-middle text-white">Explore</h5>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hidden Gem Section (Properly Positioned) -->
+    <div class="row mt-5">
+        <div class="col-12 d-flex justify-content-center">
+            <a href="hiddengems.html">
+                <div class="gem-icon"></div>
+            </a>
+        </div>
+    </div>
+</section>
+
+ <!-- Contact Section -->       
+    <div id="contact">
+        <div class="contact-image"></div>
+        <div class="black-overlay"></div>
+        <h2>Contact Us</h2>
+        <div class="form-container">
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <button type="submit" class="btn btn-primary rounded-pill  py-2 px-5">Submit</button> 
+            </form>
+        </div>
+        <div class="creators">
+            Meet The Creators: <br><br>
+            <span><a href="https://www.instagram.com/anvita_ab?igsh=MTN2ODRlcWk5anFqcg=="
+                    target="_blank">Anvita</a></span> |
+            <span><a href="https://www.instagram.com/robyn_quigleyx?igsh=MTJ2NzNwOGE3NWo5Ng%3D%3D&utm_source=qr"
+                    target="_blank">Robyn</a></span> |
+            <span><a href="https://www.instagram.com/karina_jethwani?igsh=MWF1cGY3NmppY2k0aw=="
+                    target="_blank">Karina</a></span> |
+            <span><a href="https://www.instagram.com/sanniyuu?igsh=ejZsOHdvcXlzMnIz" target="_blank">Sanni</a></span> |
+            <span><a href="https://www.instagram.com/morgan94devine?igsh=MWFwMHc3dHA5cjV1eA=="
+                    target="_blank">Morgan</a></span> |
+            <span><a href="https://www.instagram.com/oscaarsaban?igsh=MW14a3dqMHE0NDdzdA=="
+                    target="_blank">Óscar</a></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<footer class="footer p-5">
+       
+    <div class="row">
+        <div class="col-md-2 text-start"><a href="trinityhome.html">
+            <img src="../assets/logo_white-02.png" alt="trinity through time logo" width="100" height="100" class="footer-logo">
+        </a></div>
+        <div class="col-md-6">
+            <p class="mb-4">College Green, Dublin 2, Ireland</p>
+            <p class="mb-3"><a href="tel:+11111111110" class="footer-link">(111) 111-1110</a></p>
+            <p class="mb-2"><a href="mailto:ttt@gmail.com" class="footer-link">ttt@gmail.com</a></p>
+        </div>
+        <div class="col-md-4">
+            <p class="mb-2"><a href="trinityhome.html" class="footer-link">Home Page</a></p>
+            <p class="mb-2"><a href="signup.html" class="footer-link">Sign Up</a></p>
+            <p class="mb-2"><a href="login.html" class="footer-link">Log In</a></p>
+            <br>
+            <small>&copy; 2025 All rights reserved.</small>
+        </div>
+    </div>
+
+</footer>
+  
+</body>
+
+</html>

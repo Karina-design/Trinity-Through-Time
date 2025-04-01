@@ -1,0 +1,243 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: url('profilebg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    min-height: 110vh;
+    /* Ensure full height */
+    margin: 0;
+    position: relative;
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: 1;
+}
+
+.logo {
+    color: #196cd2;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #196cd2;
+    font-weight: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+.profile-link {
+    font-weight: bold;
+}
+
+.container {
+    flex: 1;
+    /* Pushes footer down */
+    position: relative;
+    z-index: 2;
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30rem;
+    height: 40rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.profile-header {
+    margin-bottom: 10px;
+}
+
+
+.profile-image {
+    position: relative;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+/* Profile Image */
+#profile-img {
+    width: 100px;
+    height: 100px;
+    padding-left: 5px;
+    border: 1px solid rgba(154, 153, 153, 0.593);
+    /* Add border-style */
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.image-upload {
+    display: none;
+}
+
+/* Upload Button */
+.upload-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #196cd2;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the Profile Title */
+.profile-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #196cd2;
+}
+
+/* Name Input Styles */
+.name-inputs {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.name-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 45%;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    gap: 2px;
+    margin: 10px 0;
+}
+
+.tab-btn {
+    background-color: #196cd2;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 4px 8px rgba(30, 181, 246, 0.2);
+}
+
+.tab-btn:hover {
+    background-color: #2894ffb4;
+    border-radius: 5px;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.tab-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.tab-content img:hover {
+    transform: scale(1, 1);
+}
+
+.sign-out-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-out-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+.footer {
+    background-color: #0569B9;
+    color: white;
+    width: 100%;    
+}
+
+.footer .footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer .footer-link:hover {
+    text-decoration: underline;
+}
+

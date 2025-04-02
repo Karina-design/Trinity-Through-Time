@@ -19,8 +19,8 @@ contents.forEach((content, i) => {
 });
 }
 
-const images = ["assets/images/image_1/image 11.jpeg", "assets/images/image_1/image 12.jpeg", "assets/images/image_1/image 13.jpeg"];
-const mainimages = ["assets/images/image_1/facade1.jpeg", "assets/images/image_1/facade2.jpeg", "assets/images/image_1/facade3.jpeg"];
+const images = ["../../assets/geography/image_1/image 11.jpeg", "../../assets/geography/image_1/image 12.jpeg", "../../assets/geography/image_1/image 13.jpeg"];
+const mainimages = ["../../assets/geography/image_1/facade1.jpeg", "../../assets/geography/image_1/facade2.jpeg", "../../assets/geography/image_1/facade3.jpeg"];
 let index = 0;
 
 function showImage() {
@@ -61,11 +61,11 @@ const nextButton = document.querySelector('.next-button');
 const mainImage = document.getElementById('carousel-image');
 
 const carouselImages = [
-'assets/images/image_1/image 3.jpeg',
-'assets/images/image_1/image 4.jpeg',
-'assets/images/image_1/image 5.jpeg',
-'assets/images/image_1/image 6.jpeg',
-'assets/images/image_1/image 7.jpeg',
+'../../assets/geography/image_1/image 3.jpeg',
+'../../assets/geography/image_1/image 4.jpeg',
+'../../assets/geography/image_1/image 5.jpeg',
+'../../assets/geography/image_1/image 6.jpeg',
+'../../assets/geography/image_1/image 7.jpeg',
 ];
 
 let currentIndexImage = 0;

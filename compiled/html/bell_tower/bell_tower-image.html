@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bell Tower - Trinity Through Time</title>
+    <link rel="stylesheet" type="text/css" href="../../css/building_page/bell_tower-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="../../assets/favicon.png">
+   
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> <!-- Navigation bar -->
+        <div class="container-fluid">
+            <a class="navbar-brand py-3 px-5" href="../trinityhome.html">
+                <img src="../../assets/_logo.png" alt="Trinity through Time Logo" width="110" height="45">
+            </a>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-4"><a href="../trinityhome.html" class="nav-link">Home</a></li>
+                    <li class="nav-item px-4"><a href="../explorepage.html" class="nav-link active">Explore</a></li>
+                    <li class="nav-item px-4"><a href="../profile.html" class="nav-link">Profile</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-light ms-auto px-5 d-none d-lg-block" id="logoutBtn">
+                Logout <i class="bi bi-box-arrow-right"></i>
+            </button>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Side menu will appear when button is clicked -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="../trinityhome.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../explorepage.html">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="../profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="../signup.html">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="../login.html">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tabs text-decoration-none">
+        <a href="bell_tower-image.html" class="tab active">IMAGE</a>
+        <a href="bell_tower-video.html" class="tab">VIDEO</a>
+        <a href="bell_tower-tour.html" class="tab">VIRTUAL TOUR</a>
+    </div>
+
+
+
+
+    <div class="content_active">
+        <img id="slideshow"  src="../../assets/bell_tower/belltower1.jpeg " alt="Slideshow Image">
+        <div class="TrinityCollegeDublin"> 
+            <div class="geography">
+                <button onclick="moveToGeography()">THE BELL TOWER </button>
+            </div>
+
+        </div>
+
+
+
+        <div class="dot-container">
+            <button class="dot active" onclick="goToSlide(0)"></button>
+            <button class="dot" onclick="goToSlide(1)"></button>
+            <button class="dot" onclick="goToSlide(2)"></button>
+        </div>
+
+        <div class="building-section ">
+            <div class="building-title">
+                <h1 class="building-title">Campanile (Bell Tower)</h1>
+            </div>
+            <div class="building-description">
+                <p>The Campanile, standing proudly at the heart of Trinity College Dublin, is one of the university’s most revered and recognizable landmarks. Erected in 1853 and designed by the renowned architect Sir Charles Lanyon, the structure exemplifies neoclassical architecture with its tall granite base, limestone columns, and elegant dome. Positioned in Parliament Square, the Campanile serves as a visual anchor amidst the college’s historic landscape, capturing the spirit of centuries-old academic tradition and scholarly excellence.
+                </p>
+                <p>Beyond its architectural beauty, the Campanile carries cultural and symbolic weight for generations of Trinity students. A famous superstition warns students never to pass beneath the tower when the bell tolls, lest they fail their exams—a belief still respected with playful seriousness today. This blend of myth and history has cemented the Campanile as more than just a monument; it is a gateway between the past and present, echoing the rhythm of campus life while reminding all who walk its grounds of Trinity’s enduring legacy.
+                </p>
+
+            </div>
+        </div>
+        <div class="image-carousel-section">
+
+            <div class="carousel-container">
+                <div class="background-blur"></div>
+
+
+                <div class="side-thumbnail left">
+                    <button class="nav-button prev-button">
+                        <span class="arrow">‹</span>
+                    </button>
+                </div>
+
+
+                <div class="main-images">
+                    <img id="carousel-image" alt="Featured image">
+                </div>
+
+
+                <div class="side-thumbnail">
+                    <button class="nav-button next-button">
+                        <span class="arrow">›</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="building-section">
+        <!-- <h1 class="building-title">The Bell Tower</h1> -->
+
+        <div class="building-description2">
+            <p>
+                <b>Structure & Design:</b>
+                The Campanile features a neoclassical architectural style, standing tall at the center of Parliament Square.
+                Designed by Sir Charles Lanyon and completed in 1853, it is supported by four Corinthian columns and topped with a domed roof and ornate lantern.
+            </p>
+            <br>
+            <p>
+                <b>Entrances & Staircases:</b>
+                Unlike larger academic buildings, the Campanile has a single, gated archway as its entrance. 
+                It does not contain public staircases or interior rooms, as it functions primarily as a symbolic and ceremonial structure.
+            </p>
+            <br>
+            <p>
+                <b>Function & Symbolism:</b>
+                The Campanile is not used for accommodation or offices; instead, it holds deep symbolic meaning.
+                It represents the academic heart of Trinity College and is closely tied to student tradition and superstition. 
+                The legend warns students not to pass under the Campanile while the bell is ringing, or risk failing their exams.
+            </p>
+            <br>
+            <p>
+                <b>Surroundings & Views:</b>
+                The Campanile is centrally located between the Examination Hall, the Chapel, and the Old Library, making it a prominent focal point on campus.
+                It is surrounded by cobbled pathways, lawns, and the vibrant activity of students and visitors throughout the day.
+            </p>
+            <br>
+            <p>
+                Though it serves no formal academic purpose, the Campanile remains one of Trinity’s most photographed and culturally significant structures, embodying both the grandeur and the legends of college life.
+            </p>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <div class="building-container">
+            <br>
+        </div>
+    
+        <h1 class="materials-title text-center">Materials</h1>
+    
+        <div class="row align-items-center px-2">
+            <!-- Text Section -->
+            <div class="col-lg-6 col-md-12">
+                <p class="intro">
+                    The Campanile at Trinity College Dublin, constructed in the mid-19th century, showcases a harmonious blend of classical design and durable materials. Its construction reflects both symbolic significance and architectural elegance. The primary materials include:
+                </p>
+                <ol class="material-list">
+                    <li><strong>Granite</strong> – Used as the foundational base and for structural stability, sourced locally for its strength and weather resistance.</li>
+                    <li><strong>Limestone</strong> – Extensively used throughout the structure, especially in the columns and statues, for its fine texture and historical importance in Irish architecture.</li>
+                    <li><strong>Portland Stone</strong> – Likely used for sculptural and ornamental details such as cornices, capitals, and carvings, contributing to the Campanile’s neoclassical aesthetic.</li>
+                    <li><strong>Iron Bell Mechanism</strong> – The bell tower houses a cast-iron bell mechanism, reflecting 19th-century engineering and used ceremonially rather than functionally today.</li>
+                    <li><strong>Lead Roofing</strong> – The dome at the top is covered with lead sheeting, a traditional roofing material that offers protection from the elements while contributing to the Campanile’s distinctive silhouette.</li>
+                </ol>
+                <p class="conclusion">
+                    These materials were selected not only for their strength and weather resilience, but also to evoke classical grandeur. Together, they reinforce the Campanile’s enduring role as a symbolic and architectural centerpiece of Trinity College.
+                </p>
+            </div>
+    
+           <!-- Image Section -->
+<div class="col-lg-6 col-md-12 text-center position-relative">
+    <img src="../../assets/bell_tower/belltower_materials.jpg" alt="Geography Building" class="img-fluid building-image">
+
+<!-- Material Dots -->
+<div class="material-point position-absolute" style="top: 60%; left: 51%;" data-material="Granite"></div>
+<div class="material-point position-absolute" style="top: 30%; left: 51%;" data-material="Limestone"></div>
+<div class="material-point position-absolute" style="top: 20%; left: 51%;" data-material="Iron Bell Mechanism"></div>
+<div class="material-point position-absolute" style="top: 45%; left: 51%;" data-material="Portland Stone"></div>
+<div class="material-point position-absolute" style="top: 25%; left: 51%;" data-material="Lead Roofing"></div>
+</div>
+    </div>
+    
+
+    <div class="container my-5">
+        <!-- Section Title -->
+        <div class="text-center">
+            <h1 class="building-title">Fun Facts</h1>
+        </div>
+    
+        <!-- Image Gallery -->
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-3">
+                <div class="position-relative">
+                    <img src="../../assets/bell_tower/didyouknow(1).png" class="img-fluid rounded" 
+                        alt="The Leaning Tower of Trinity? – Over the centuries, the building has slightly shifted due to settling, leading some students to joke that it’s Dublin’s version of the Leaning Tower of Pisa—just much slower and far less dramatic.">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="position-relative">
+                    <img src="../../assets/bell_tower/didyouknow(2).png" class="img-fluid rounded" 
+                        alt="Alumni and Scholars: Trinity College has produced many prominent figures in various fields, including Oscar Wilde, Samuel Beckett, Douglas Hyde (Ireland’s first president), and Ernest Walton, who was a co-winner of the Nobel Prize in Physics in 1951">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="position-relative">
+                    <img src="../../assets/bell_tower/didyouknow(3).png" class="img-fluid rounded" 
+                        alt="The Campanile and the Famous Tradition: The Trinity College Campanile is a landmark bell tower located at the heart of the campus. A well-known campus tradition involves students not walking under the Campanile, as it is believed to be bad luck — said to bring an early death or misfortune to anyone who does.">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="position-relative">
+                    <img src="../../assets/bell_tower/didyouknow(4).png" class="img-fluid rounded" 
+                        alt="Historic Library and the Book of Kells: The college is home to the famous Trinity College Library, which houses the Book of Kells, a beautifully illuminated manuscript of the Four Gospels dating from around the 9th century. It is one of Ireland’s most visited tourist attractions and a key part of the college's rich history.">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+  <!-- Footer -->
+  <footer class="footer p-5">   
+    <div class="row">
+        <div class="col-md-2 text-start"><a href="trinityhome.html">
+            <img src="../../assets/logo_white-02.png" alt="trinity through time logo" width="100" height="100" class="footer-logo">
+        </a></div>
+        <div class="col-md-4">
+            <p class="mb-4">College Green, Dublin 2, Ireland</p>
+            <p class="mb-3"><a href="tel:+11111111110" class="footer-link">(111) 111-1110</a></p>
+            <p class="mb-2"><a href="mailto:ttt@gmail.com" class="footer-link">ttt@gmail.com</a></p>
+        </div>
+        <div class="col-md-3">
+            <p class="mb-2"><a href="explorepage.html" class="footer-link">Explore</a></p>
+            <p class="mb-2"><a href="profile.html" class="footer-link">Profile</a></p>
+            <p class="mb-2"><a href="settings.html" class="footer-link">Settings</a></p>
+        </div>
+        <div class="col-md-3">
+            <p class="mb-2"><a href="trinityhome.html" class="footer-link">Home Page</a></p>
+            <p class="mb-2"><a href="signup.html" class="footer-link">Sign Up</a></p>
+            <p class="mb-2"><a href="login.html" class="footer-link">Log In</a></p>
+            <br>
+            <small>&copy; 2025 All rights reserved.</small>
+        </div>
+    </div>
+
+</footer>
+  
+
+
+
+    <script src="../../script/bell_tower/bell_tower-javascript.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+   
+</body>
+
+
+
+
+</html>

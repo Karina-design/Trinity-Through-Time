@@ -27,33 +27,21 @@ body {
   }
   
 /* Hero Section */
-#hero {
-    height: 100vh;
-    background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    /* This will allow absolute positioning of child elements */
-}
 
-.hero-image {
-    position: absolute;
+.hero-container {
+    position: relative;
     width: 100%;
-    height: 100%;
-    background-image: url('../assets/trinity.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
+   
+    padding-bottom: 1rem;
 }
 
 .circle-button {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    background-color: #9d0000;
-    border: 2px solid #196cd2;
+    background-color:rgba(124, 1, 1, 0.747);
+    border: 2px solid white;
     font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
     color: white;
@@ -95,7 +83,7 @@ position: relative;
     justify-content: space-between center;
     /* Ensures spacing between text & gallery */
     position: relative;
-    padding: 0 50px;
+    padding:2rem;
 }
 
 .history-image {

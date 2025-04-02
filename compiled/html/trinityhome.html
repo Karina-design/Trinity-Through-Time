@@ -25,9 +25,8 @@
 </head>
 
 <body>
-    <!-- Navigation bar -->
-    <!-- The navigation bar is sticky and will remain at the top of the page when scrolling -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> <!-- Navigation bar -->
+     <!-- Navigation bar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> <!-- Navigation bar -->
         <div class="container-fluid">
             <a class="navbar-brand py-3 px-5" href="trinityhome.html">
                 <img src="../assets/logo.png" alt="Trinity through Time Logo" width="110" height="45">
@@ -36,7 +35,15 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item px-4"><a href="trinityhome.html" class="nav-link active">Home</a></li>
-                    <li class="nav-item px-4"><a href="explorepage.html" class="nav-link">Explore</a></li>
+                    <li class="nav-item px-4 dropdown"><a href="explorepage.html" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="explorepage.html">All Buildings</a></li>
+                            <li><a class="dropdown-item" href="rubrics/rubric-image.html">Rubric</a></li>
+                            <li><a class="dropdown-item" href="geography/geography-image.html">Geography Building</a></li>
+                            <li><a class="dropdown-item" href="#">GMB</a></li>
+                            <li><a class="dropdown-item" href="bell_tower/bell_tower-image.html">Bell Tower</a></li>
+                          </ul>
+                    </li>
                     <li class="nav-item px-4"><a href="profile.html" class="nav-link">Profile</a></li>
                 </ul>
             </div>
@@ -58,7 +65,16 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="trinityhome.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="explorepage.html">Explore</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+                    
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="explorepage.html">All Buildings</a></li>
+                          <li><a class="dropdown-item" href="rubrics/rubric-image.html">Rubric</a></li>
+                          <li><a class="dropdown-item" href="geography/geography-image.html">Geography Building</a></li>
+                          <li><a class="dropdown-item" href="#">GMB</a></li>
+                          <li><a class="dropdown-item" href="bell_tower/bell_tower-image.html">Bell Tower</a></li>
+                        </ul>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
                 <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
@@ -66,20 +82,23 @@
         </div>
     </div>
 
-<!-- Hero section -->
+
+
+ 
+<!-- Hero Section -->
 <section class="container-fluid">
-    <div class="history-image"></div>
-</section>   
-<div id="hero" class="container-fluid">
+    <div class="hero-container position-relative">
+        <img src="../assets/aerial.png" alt="aerial view of trinity college dublin" class="img-fluid hero-image">
 
-        <div class="hero-image"></div>
-        <button class="circle-button" style="top: 450px; left: 350px;">1</button>
-       
-        <button class="circle-button" style="top: 350px; left: 980px;">2</button>
-        <button class="circle-button" style="top: 370px; right: 80px;">3</button>
-        <button class="circle-button" style="top: 400px; left: 60px;">4</button>
-
+        <!-- Dots that move with image -->
+        <button class="circle-button" style="top: 40%; left: 30%;"><a href="rubrics/rubric-image.html" style="text-decoration: none; color: white;">1</a></button>
+        <button class="circle-button" style="top: 22%; left: 30%;"><a href="geography/geography-image.html" style="text-decoration: none; color: white;">2</a></button>
+        <button class="circle-button" style="top: 65%; left: 25%;"><a href="#" style="text-decoration: none; color: white;">3</a></button>
+        <button class="circle-button" style="top: 55%; left: 55%;"><a href="bell_tower/bell_tower-image.html" style="text-decoration: none; color: white;">4</a></button>
     </div>
+</section>
+
+
 
   
 

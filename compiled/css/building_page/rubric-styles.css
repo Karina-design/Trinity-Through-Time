@@ -218,7 +218,7 @@ body {
 .building-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 2rem;
 }
 
 .building-description1 {
@@ -238,17 +238,17 @@ body {
 
 .vedio-description {
     font-family: 'poppins';
-    font-size:0.85rem;
-    margin-bottom: 30px;
+    font-size: 0.85rem;
+   
     line-height: 1.2;
-    padding:3rem;
+  
 }
 
 .vedio-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
-  
+    padding: 20px;
+   
 
 }
 

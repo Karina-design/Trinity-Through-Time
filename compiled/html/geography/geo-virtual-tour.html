@@ -10,68 +10,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geography Building -  Trinity Through Time</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../../css/building_page/geo-styles.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="icon" type="image/png" href="../../assets/favicon.png">
 </head>
 
+
 <body>
-       
-    <header>
-        <nav class="navbar"> 
-            <a href="ttt.html">
-            <img class="logo" src="assets/images/image_2/logo ttt (6).png">
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> 
+        <div class="container-fluid">
+            <a class="navbar-brand py-3 px-5" href="../trinityhome.html">
+                <img src="../../assets/logo.png" alt="Trinity through Time Logo" width="110" height="45">
             </a>
-            <div class="logo">Trinity<br>Through <br>Time</div>
-           
-        
-            <ul class="nav-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#explore">EXPLORE</a></li>
-                <li><a href="#profile">PROFILE</a></li>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-4"><a href="../trinityhome.html" class="nav-link">Home</a></li>
+                    <li class="nav-item px-4"><a href="../explorepage.html" class="nav-link active">Explore</a></li>
+                    <li class="nav-item px-4"><a href="../profile.html" class="nav-link">Profile</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-light ms-auto px-5 d-none d-lg-block" id="logoutBtn">
+                Logout <i class="bi bi-box-arrow-right"></i>
+            </button>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Side menu will appear when button is clicked -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="../trinityhome.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../explorepage.html">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="../profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="../signup.html">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="../login.html">Log In</a></li>
             </ul>
-            <ul class="login">
-                <a href="#LogIn">
-                <img class="logo" src="assets/images/image_2/login.png"></a>
-            </ul>
-        </nav>
-    </header>
-<body>
+        </div>
+    </div>
+
+    <!--sub menu-->
     <div class="tabs">
-        <a href="image.html" class="tab">IMAGE</a>
-        <a href="video.html" class="tab">VIDEO</a>
-        <a href="virtual-tour.html" class="tab active">VIRTUAL TOUR</a>
+        <a href="geography-image.html" class="tab">IMAGE</a>
+        <a href="geography-video.html" class="tab">VIDEO</a>
+        <a href="geo-virtual-tour.html" class="tab active">VIRTUAL TOUR</a>
     </div>
 
 
-
-    <div class="virtual-container">
+    <div class="container virtual-container">
        
-        <img src="assets/images/image_2/geography_materials.png" class="base-image">
+        <img src="../../assets/geography/image_2/geography_materials.png" class="base-image">
 
         <a href="https://my.threesixty.tours/app/v/60c26u/a0q509/uz5bif" class="overlay-link">
-            <img src="assets/images/image_2/overlay.png" class="overlay-image">
+            <img src="../../assets/geography/image_2/overlay.png" class="overlay-image">
         </a>
     </div>
     
-    <div class="building-description1">
-        <p>✦✦</p>
-    </div>
-    <a href="https://my.threesixty.tours/app/v/60c26u/1683nr/uz5bif" class="Explore-button">
-        Explore More
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
-          <path d="M5 12h14"></path>
-          <path d="M12 5l7 7-7 7"></path>
-        </svg>
-      </a>
+    
    
         <!-- Footer -->
     <footer class="footer p-5">   
         <div class="row">
             <div class="col-md-2 text-start"><a href="trinityhome.html">
-                <img src="../assets/logo_white-02.png" alt="trinity through time logo" width="100" height="100" class="footer-logo">
+                <img src="../../assets/logo_white-02.png" alt="trinity through time logo" width="100" height="100" class="footer-logo">
             </a></div>
             <div class="col-md-4">
                 <p class="mb-4">College Green, Dublin 2, Ireland</p>
@@ -93,5 +105,8 @@
         </div>
     
     </footer>
-
+    <script src="../../script/geography/geo_video.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
+</html>

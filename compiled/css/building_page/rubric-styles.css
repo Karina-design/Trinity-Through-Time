@@ -10,7 +10,7 @@ body {
 }
 
 .logo {
-    color: #196cd2;
+    color: #0569B9;
     padding: 10px 4px;
     font-size: 15px;
 }
@@ -83,11 +83,11 @@ body {
 
 .tab:hover {
     color: white;
-    background: #196cd2;
+    background: #0569B9;
 }
 
 .tab.active {
-    background-color: #0066cc;
+    background-color: #0569B9;
     color: white;
 }
 
@@ -185,11 +185,11 @@ body {
 }
 
 .dot.active {
-    background-color: #196cd2;
+    background-color: #0569B9;
 }
 
 .building-title {
-    color: #2563a8;
+    color: #0569B9;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.8rem;
     text-align: center;
@@ -198,7 +198,7 @@ body {
 }
 
 .materials-title {
-    color: #2563a8;
+    color: #0569B9;
     font-family: 'Palatino', sans-serif;
     font-size: 2.0rem;
     text-align: center;
@@ -221,6 +221,10 @@ body {
     padding: 20px;
 }
 
+.building-description1 {
+    text-align: center;
+    color: #0569B9;
+}
 
 
 .building-description2 {
@@ -234,17 +238,17 @@ body {
 
 .vedio-description {
     font-family: 'poppins';
-    font-size: 0.85rem;
+    font-size:0.85rem;
     margin-bottom: 30px;
     line-height: 1.2;
-    padding: 30px;
+    padding:3rem;
 }
 
 .vedio-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    margin-top: 90px;
+    padding: 2rem;
+  
 
 }
 
@@ -301,7 +305,7 @@ body {
     opacity: 1;
     position: relative;
     border-radius: 50%;
-    background-color: #0066cc;
+    background-color: #0569B9;
 }
 
 .nav-button {
@@ -314,7 +318,7 @@ body {
 }
 
 .image-text {
-    color: #2563a8;
+    color: #0569B9;
     font-family: 'Palatino', sans-serif;
     font-size: 1.8rem;
     text-align: center;
@@ -337,7 +341,7 @@ body {
 
 .title {
     font-size: 32px;
-    color: #2b5dad;
+    color: #0569B9;
     margin-bottom: 20px;
 }
 
@@ -392,7 +396,7 @@ body {
 }
 
 .body {
-    font-family: Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -403,7 +407,7 @@ body {
 
 .building-title {
     text-decoration: none;
-    color: #196cd2;
+    color: #0569B9;
 }
 
 .image-gallery {
@@ -445,7 +449,7 @@ body {
 }
 
 .button {
-    background-color: #196cd2;
+    background-color: #0569B9;
     color: white;
     font-size: 2rem;
     border: inherit;
@@ -526,7 +530,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: #1973ce;
+    background: #0569B9;
     color: white;
     padding: 10px;
     font-size: 14px;
@@ -535,7 +539,7 @@ body {
 }
 
 .interviews-title {
-    color: #196cd2;
+    color: #0569B9;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.8rem;
     text-align: center;
@@ -625,7 +629,7 @@ body {
     position: absolute;
     width: 16px;
     height: 16px;
-    background-color: #196cd2;
+    background-color: #0569B9;
     border-radius: 50%;
     border: 1px solid white;
     cursor: pointer;

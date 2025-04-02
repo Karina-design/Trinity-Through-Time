@@ -18,10 +18,47 @@
 </head>
 
 <body>
-       
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> 
+        <div class="container-fluid">
+            <a class="navbar-brand py-3 px-5" href="../trinityhome.html">
+                <img src="../../assets/logo.png" alt="Trinity through Time Logo" width="110" height="45">
+            </a>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-4"><a href="../trinityhome.html" class="nav-link">Home</a></li>
+                    <li class="nav-item px-4"><a href="../explorepage.html" class="nav-link active">Explore</a></li>
+                    <li class="nav-item px-4"><a href="../profile.html" class="nav-link">Profile</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-light ms-auto px-5 d-none d-lg-block" id="logoutBtn">
+                Logout <i class="bi bi-box-arrow-right"></i>
+            </button>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Side menu will appear when button is clicked -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="../trinityhome.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../explorepage.html">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="../profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="../signup.html">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="../login.html">Log In</a></li>
+            </ul>
+        </div>
+    </div>
     
 
-    <div class="tabs">
+    <div class="tabs text-decoration-none">
         <a href="geography-image.html" class="tab active">IMAGE</a>
         <a href="geography-video.html" class="tab">VIDEO</a>
         <a href="geo-virtual-tour.html" class="tab">VIRTUAL TOUR</a>
@@ -32,17 +69,12 @@
         
     <div class="content_active">
         <img id="slideshow" src="../../assets/geography/image_1/image 12.jpeg" alt="Slideshow Image">
-    <div class="TrinityCollegeDublin"> TRINITY COLLEGE DUBLIN
+    <div class="TrinityCollegeDublin"> 
         <div class="geography">  
             <button onclick="moveToGeography()">GEOGRAPHY BUILDING </button>
         </div>
-
     </div>
-
-
-
    
-
     <div class="dot-container">
         <button class="dot active" onclick="goToSlide(0)"></button>
         <button class="dot" onclick="goToSlide(1)"></button>
@@ -51,7 +83,7 @@
 
     <div class="building-section ">
          <div class="building-title">
-        <h1 class="building-title">Geography Building</h1>
+        <h1>Geography Building</h1>
         </div>
         <div class="building-description1">
             <p>✦✦</p>
@@ -63,12 +95,9 @@
             <p></p>
     </div>
     </div>
-    <div class="image-carousel-section">
-       
 
-    
-      
-        <div class="carousel-container">
+    <div class="image-carousel-section">
+         <div class="carousel-container">
             <div class="background-blur"></div>
             
             
@@ -113,9 +142,10 @@
     <div class="container">
         <div class="building-container"> </div>
    
-        <h1 class="materials-title">Materials</h1>
-   <div class="content">
-        <div class="text-section">
+        <h1 class="materials-title text-center">Materials</h1>
+   <div class="row align-items-center px-2">
+    <!--Text section-->
+        <div class="col-lg-6 col-md-12">
             <p class="intro">
                 The Geography Building at Trinity College Dublin is constructed using a combination of traditional and modern materials, reflecting both its historical setting and functional purpose. The primary materials include:
             </p>
@@ -132,8 +162,9 @@
             </p>
         </div>
 
-        <div class="image-section">
-            <img src="assets/images/image_2/geography_materials.png" alt="Geography Building" class="building-image">
+        <!--Image section-->
+        <div class="col-lg-6 col-md-12 text-center position-relative">
+            <img src="../../assets/geography/image_2/geography_building.jpg" alt="Geography Building" class="img-fluid building-image">
   
             <div class="material-point" style="top: 20%; left: 30%;" data-material="Limestone"></div>
             <div class="material-point" style="top: 50%; left: 60%;" data-material="Glass"></div>
@@ -144,25 +175,51 @@
     </div>   
 </div>
 
-    <div class="building-title">Did you Know</h1>
-    </div>
+<div class="container">
+    <!--Section Title-->
+    <div class="text-center building-title">
+    <h1>Fun Facts</h1>
+</div>
+
+   <!--Image Gallery-->
     <div class="building-description1">
         <p>✦✦</p>
     </div>
-    <div class="image-gallery">
-        <img src="assets/images/image_2/DYK1.png" alt="Image 1" class="image">
-        <img src="assets/images/image_2/didyouknow(5).png" alt="Image 2" class="image">
-        <img src="assets/images/image_2/didyouknow(6).png" alt="Image 3" class="image">
-        <img src="assets/images/image_2/didyouknow(7).png" alt="Image 3" class="image">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-3">
+            <div class="position-relative fact">
+                <img src="../../assets/geography/image_2/DYK1.png" class="img-fluid rounded" 
+                    alt="">
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="position-relative fact">
+                <img src="../../assets/geography/image_2/didyouknow(5).png" class="img-fluid rounded" 
+                    alt="Alumni and Scholars: Trinity College has produced many prominent figures in various fields, including Oscar Wilde, Samuel Beckett, Douglas Hyde (Ireland’s first president), and Ernest Walton, who was a co-winner of the Nobel Prize in Physics in 1951">
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="position-relative fact">
+                <img src="../../assets/geography/image_2/didyouknow(6).png" class="img-fluid rounded" 
+                    alt="The Campanile and the Famous Tradition: The Trinity College Campanile is a landmark bell tower located at the heart of the campus. A well-known campus tradition involves students not walking under the Campanile, as it is believed to be bad luck — said to bring an early death or misfortune to anyone who does.">
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="position-relative fact">
+                <img src="../../assets/geography/image_2/didyouknow(7).png" class="img-fluid rounded" 
+                    alt="Historic Library and the Book of Kells: The college is home to the famous Trinity College Library, which houses the Book of Kells, a beautifully illuminated manuscript of the Four Gospels dating from around the 9th century. It is one of Ireland’s most visited tourist attractions and a key part of the college's rich history.">
+            </div>
+        </div>
     </div>
-
+   
+</div>
    
    
       <!-- Footer -->
       <footer class="footer p-5">   
         <div class="row">
             <div class="col-md-2 text-start"><a href="trinityhome.html">
-                <img src="../assets/logo_white-02.png" alt="trinity through time logo" width="100" height="100" class="footer-logo">
+                <img src="../../assets/logo_white-02.png" alt="trinity through time logo" width="100" height="100" class="footer-logo">
             </a></div>
             <div class="col-md-4">
                 <p class="mb-4">College Green, Dublin 2, Ireland</p>
@@ -187,8 +244,8 @@
     
     
 
-    <script src="assets/script/javascript.js" type="text/javascript"></script>
-
+    <script src="../../script/rubric/rubric-javascript.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 
   

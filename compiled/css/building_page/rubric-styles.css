@@ -39,24 +39,6 @@ body {
     text-align: center;
 }
 
-form input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 50%;
-}
-
-.homepagebutton {
-    background-color: blue;
-    color: white;
-    border: none;
-    transition: background-color 0.3s;
-}
-
-.homepagebutton:hover {
-    background-color: darkblue;
-}
-
 
 /* Footer */
 .footer {
@@ -109,6 +91,10 @@ form input {
     color: white;
 }
 
+.fact:hover{
+    box-shadow: rgba(0, 54, 214, 0.2);
+    scale: 1.05;
+}
 
 
 

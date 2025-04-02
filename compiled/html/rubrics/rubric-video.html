@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+<!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> <!-- Navigation bar -->
         <div class="container-fluid">
             <a class="navbar-brand py-3 px-5" href="../trinityhome.html">
@@ -68,11 +68,17 @@
             <a href="rubric-virtual-tour.html" class="tab">VIRTUAL TOUR</a>
         </div>
 
-        <div class="video-container">
-            <video width="1500" height="650" controls autoplay muted loop>
-                <source src="assets/images/rubric_video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                        <video controls autoplay muted loop class="w-100">
+                            <source src="../../assets/rubric/rubric_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="building-section ">
@@ -103,42 +109,42 @@
         </div>
         </div>
 
-        <div class="video-container">
-            <button class="button left" onclick="changeVideo('video1')">←</button>
-
-            <div class="video-wrapper">
-                <iframe id="video-player" width="1000" height="600" src="https://www.youtube.com/embed/1lmTs3bXOq4"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-                </iframe>
+        <div class="container ">
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <!-- Left Button -->
+                <button class="btn btn-primary mx-2" onclick="changeVideo('video1')">←</button>
+        
+                <!-- Video Wrapper -->
+                <div class="ratio ratio-16x9" style="max-width: 800px; width: 100%;">
+                    <iframe id="video-player" src="https://www.youtube.com/embed/1lmTs3bXOq4"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+                </div>
+        
+                <!-- Right Button -->
+                <button class="btn btn-primary mx-3" onclick="changeVideo()">→</button>
             </div>
-
-            <button class="button right" onclick="changeVideo()">→</button>
-
-
+            <div class="vedio-section ">
+                <div class="vedio-description">
+                    <p>A cool fact about the Rubrics building at Trinity College Dublin is that it has been continuously
+                        used as student accommodation for over 300 years, making it Ireland’s longest-serving residential
+                        building with an academic purpose. Despite its age, it remains a sought-after place to live, with
+                        its red-brick charm and central location in the historic heart of the university. It even featured
+                        in the TV adaptation of Normal People, giving it a pop culture connection alongside its deep
+                        academic history!.</p>
+    
+                    <p>Additionally, The Rubrics is a three-story red-brick building dating back to 1699-1705, with an
+                        additional floor added in 1894. Given its approximate dimensions, it likely contains hundreds of
+                        thousands of bricks. A standard 17th-century brick size in Ireland would have been roughly 9 inches
+                        (length) × 4.5 inches (width) × 2.5 inches (height), with mortar joints between them. Using
+                        estimates from similar historical buildings, the total could range between 500,000 to 1,000,000
+                        bricks.</p>
+    
+                </div>
+            </div>
         </div>
 
-        <script src="assets/script/video.js"></script>
-
-        <div class="vedio-section ">
-            <div class="vedio-description">
-                <p>A cool fact about the Rubrics building at Trinity College Dublin is that it has been continuously
-                    used as student accommodation for over 300 years, making it Ireland’s longest-serving residential
-                    building with an academic purpose. Despite its age, it remains a sought-after place to live, with
-                    its red-brick charm and central location in the historic heart of the university. It even featured
-                    in the TV adaptation of Normal People, giving it a pop culture connection alongside its deep
-                    academic history!.</p>
-
-                <p>Additionally, The Rubrics is a three-story red-brick building dating back to 1699-1705, with an
-                    additional floor added in 1894. Given its approximate dimensions, it likely contains hundreds of
-                    thousands of bricks. A standard 17th-century brick size in Ireland would have been roughly 9 inches
-                    (length) × 4.5 inches (width) × 2.5 inches (height), with mortar joints between them. Using
-                    estimates from similar historical buildings, the total could range between 500,000 to 1,000,000
-                    bricks.</p>
-
-            </div>
-        </div>
-
-        <div class="interviews-container">
+        <div class="container-fluid p-5">
             <div class="interviews-title">
                 <h1 class="interviews-title">Interviews</h1>
             </div>
@@ -178,7 +184,6 @@
             <button class="nav-button nav-right" onclick="scrollRight()">❯</button>
         </div>
 
-        <script src="assets/script/rubric-video.js"></script>
 
          <!-- Footer -->
     <footer class="footer p-5">   
@@ -207,7 +212,8 @@
     
     </footer>
 
-
+    <script src="../../script/rubric/rubric-video.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     </body>
 
 </html>

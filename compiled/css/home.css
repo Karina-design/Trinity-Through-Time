@@ -227,7 +227,7 @@ position: relative;
     position: relative;
     text-align: center;
     padding: 50px;
-    display: flex;
+ 
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -269,9 +269,10 @@ font-size: 2.8rem;
 
 .form-container {
     background: rgba(0, 0, 0, 0.7);
-    padding: 40px;
+    padding: 2rem;
     border-radius: 10px;
-    max-width: 28rem;
+   max-width: 30rem;
+   margin: auto;
 }
 
 form {

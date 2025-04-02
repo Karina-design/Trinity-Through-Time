@@ -574,28 +574,40 @@ form input {
 .virtual-container {
     margin: auto;
 
-    display: flex;
+    display:flex;
 
 }
 
 .virtual-container {
-    height: 700px;
+   height: 80vh;
+    min-height: 30rem;
     width: 100%;
 }
 
 .base-image {
-    display: block;
+   
     width: 100%;
-    height: auto;
+    
 }
 
 .overlay-link {
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+}
+
+@media screen {
+    .overlay-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    } 
 }
 
 .overlay-image {

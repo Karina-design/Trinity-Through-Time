@@ -239,6 +239,39 @@
         </div>
     
     </footer>
+    <script>
+        function handleCredentialResponse(response) {
+            const jwt = response.credential;
+            const userInfo = JSON.parse(atob(jwt.split('.')[1])); // Decode JWT
+
+            // Check if email is from @tcd.ie
+            if (!userInfo.email.endsWith("@tcd.ie")) {
+                alert("Access restricted to TCD users.");
+                window.location.href = "signup.html"; // Redirect unauthorized users
+            } else {
+                sessionStorage.setItem("userEmail", userInfo.email); // Store the user's email
+                sessionStorage.setItem("userName", userInfo.name); // Optionally, store the user's name
+                document.getElementById("welcomeMessage").innerText = "Welcome, " + userInfo.name + "!";
+            }
+        }
+
+        google.accounts.id.initialize({
+            client_id: "YOUR_GOOGLE_CLIENT_ID",
+            callback: handleCredentialResponse
+        });
+
+        google.accounts.id.prompt(); // Show login popup
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let email = sessionStorage.getItem("userEmail");
+            let name = sessionStorage.getItem("userName");
+
+            if (email && name) {
+                document.getElementById("welcomeMessage").innerText = "Welcome back, " + name + "!";
+            }
+        });
+    </script>
   
 </body>
 

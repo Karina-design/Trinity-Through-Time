@@ -238,6 +238,27 @@
         window.location.href = link;
       }, 1300);
     }
-  </script>  
+  </script> 
+
+  <!--hidden gem access-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let email = localStorage.getItem("userEmail");
+
+      if (!email) {
+        alert("Please log in first.");
+        window.location.href = "signup.html"; //check link
+        return;
+      }
+
+      if (!email.endsWith("@tcd.ie")) {
+        alert("Access restricted to TCD users.");
+        window.location.href = "trinityhome.html"; // check link
+      }
+    });
+  </script>
+
+
+  
 </body>
 </html>

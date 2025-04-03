@@ -14,34 +14,54 @@
 
     
     <!-- Sign Up section -->
+   <!-- Sign Up section -->
     <div class="container_signup">
         <div class="tabs">
             <a href="login.html">Login</a>
-            <a href="#" class="active">Signup</a>
-        </div> 
+            <a href="#" class="active">Signup</a> <!--is this okay or does there need to be a link-->
+        </div>
         <h2>Create an Account</h2>
-        <form id="signup-form" onsubmit="signUp(event)">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-
-            <div class="radio-group">
-                <span>Are you a student?</span>
-                <label>
-                    <input type="radio" name="student" value="yes">
-                    Yes
-                </label>
-                <label>
-                    <input type="radio" name="student" value="no">
-                    No
-                </label>
-            </div>
-
-            <button type="submit" class="btn btn-primary rounded-pill  py-2 px-5">Sign Up</button>
-        </form>
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <div class="radio-group">
+            <span>Are you a student?</span>
+            <label>
+                <input type="radio" name="student" value="yes">
+                Yes
+            </label>
+            <label>
+                <input type="radio" name="student" value="no">
+                No
+            </label>
+        </div>
+        <button class="btn" id="signupBtn">Sign Up</button>
     </div>
 
-   <!--Footer-->
+    <!--hidden gem access-->
+    <script>
+        document.getElementById("signupBtn").addEventListener("click", function () {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let isStudent = document.querySelector("input[name='student']:checked");
+
+            if (!name || !email || !password || !isStudent) {
+                alert("Please fill in all fields!");
+                return;
+            }
+
+            // Store user data in localStorage
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("isStudent", isStudent.value);
+
+            alert("Signup successful! Redirecting...");
+            window.location.href = "trinityhome.html";
+        });
+    </script>
+    
+
     <!-- Footer -->
     <footer class="footer p-5">   
         <div class="row">

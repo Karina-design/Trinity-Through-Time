@@ -32,7 +32,7 @@ body {
     position: relative;
     width: 100%;
    
-    padding-bottom: 1rem;
+/*padding-bottom: 1rem;*/
 }
 
 .circle-button {
@@ -106,14 +106,14 @@ position: relative;
 }
 
 #history h2 {
-    font-size: 50px;
-    margin-bottom: 20px;
+    font-size: 3rem;
+   
     font-family: 'Times New Roman', Times, serif;
 }
 
 #history p {
-    font-size: 20px;
-   
+    font-size: 1rem;
+   margin-bottom: 2rem;
 }
 
 /* Button */
@@ -145,7 +145,7 @@ position: relative;
 
 /* Features Section */
 #features { 
-    padding: 50px;
+    padding: 2rem;
     text-align: center;
     background-color: white;
     position: relative;
@@ -155,7 +155,7 @@ position: relative;
     font-family: 'Times New Roman', Times, serif;
     color: #196cd2;
     font-size: 50px;
-    padding: 10px;
+    padding: 1rem;
 }
 /* Feature Items */
 
@@ -188,6 +188,8 @@ position: relative;
 }
 
 
+
+
 .gem-icon {
     position: absolute;
     bottom: 20px;
@@ -214,7 +216,7 @@ position: relative;
     color: white;
     position: relative;
     text-align: center;
-    padding: 50px;
+    padding: 3rem;
  
     flex-direction: column;
     align-items: center;
@@ -226,7 +228,7 @@ position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+   height: 50rem;
     background: url('../assets/contactbackground.jpg') no-repeat center center/cover;
     filter: grayscale(100%);
     z-index: -1;
@@ -273,7 +275,7 @@ input {
     background: transparent;
     border: none;
     border-bottom: 1px solid white;
-    padding: 15px;
+    padding: 1.5rem;
     font-family: 'Courier New', Courier, monospace;
     color: white;
     font-size: 16px;
@@ -286,13 +288,13 @@ input::placeholder {
 
 
 .creators {
-    margin-top: 50px;
+    margin-top: 3rem;
     font-size: 1.2rem;
     color: white;
 }
 
 .creators span {
-    margin: 0 10px;
+    margin: 0 1rem;
     opacity: 0.8;
 }
 
@@ -318,7 +320,7 @@ input::placeholder {
 .footer .footer-link {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .footer .footer-link:hover {

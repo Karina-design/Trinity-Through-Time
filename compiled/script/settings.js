@@ -1,81 +1,85 @@
-// Objeto de traducción para cada idioma
+// Translation object for each language
 const translations = {
     en: {
         settings: "Settings",
         language: "Language",
-        selectLanguage: "Select your preferred language.",
         profile: "Profile",
         logOut: "Log Out"
     },
     es: {
         settings: "Configuración",
         language: "Idioma",
-        selectLanguage: "Selecciona tu idioma preferido.",
         profile: "Perfil",
         logOut: "Cerrar sesión"
     },
     de: {
         settings: "Einstellungen",
         language: "Sprache",
-        selectLanguage: "Wählen Sie Ihre bevorzugte Sprache.",
         profile: "Profil",
         logOut: "Ausloggen"
     },
     hi: {
         settings: "सेटिंग्स",
         language: "भाषा",
-        selectLanguage: "अपनी पसंदीदा भाषा चुनें।",
         profile: "प्रोफ़ाइल",
         logOut: "लॉग आउट"
     },
     ga: {
         settings: "Socruithe",
         language: "Teanga",
-        selectLanguage: "Roghnaigh do theanga is fearr leat.",
         profile: "Cúntas",
         logOut: "Logáil amach"
     }
 };
 
-// Función para cambiar el idioma
+// Function to change the language
 function changeLanguage(lang) {
-    console.log('Language changed to: ' + lang);
+    console.log('Changing language to: ' + lang);
 
-    // Actualiza el contenido de la página con las traducciones del idioma seleccionado
+    // Get the translation object for the selected language
     const translation = translations[lang];
 
-    // Cambia los textos de los elementos con los IDs correspondientes
-    document.getElementById('settings-title').innerText = translation.settings;
-    document.getElementById('language-title').innerText = translation.language;
-    document.getElementById('language-description').innerText = translation.selectLanguage;
-    document.getElementById('profile-btn').innerText = translation.profile;
-    document.getElementById('log-out-btn').innerText = translation.logOut;
+    // Update the Settings title
+    const settingsTitle = document.getElementById('settings-title');
+    if (settingsTitle) settingsTitle.innerText = translation.settings;
 
-    // Cambiar el texto del botón de idioma
-    document.querySelector('.language-btn').innerText = translation.language;
+    // Update the language button text
+    const languageButton = document.querySelector('.language-btn p');
+    if (languageButton) languageButton.innerText = translation.language;
 
-    // Cerrar el desplegable después de seleccionar un idioma
-    document.getElementById('language-select').style.display = 'none';
+    // Update the Profile button text
+    const profileButton = document.getElementById('profile-btn');
+    if (profileButton) profileButton.innerHTML = `<a href="profile.html" style="text-decoration: none; color: white;"><p class="h5">${translation.profile}</p></a>`;
+
+    // Update the Logout button text
+    const logoutButton = document.getElementById('log-out-btn');
+    if (logoutButton) logoutButton.innerText = translation.logOut;
+
+    // Close the dropdown after selecting a language
+    const languageDropdown = document.getElementById('language-select');
+    if (languageDropdown) languageDropdown.style.display = 'none';
 }
 
-// Función para mostrar/ocultar el menú de selección de idioma
+// Function to show/hide the language selection dropdown
 function toggleLanguageSelect() {
     const dropdown = document.getElementById('language-select');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    if (dropdown) {
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
 }
 
-// Función de Log Out
+// Log Out function
 function logOut() {
     console.log('Logging out...');
-    window.location.href = '/login.html'; // Ajusta la ruta si es necesario
+    window.location.href = '../html/login.html'; // Adjust the path if necessary
 }
 
-// Función para ocultar el desplegable si el usuario hace clic fuera de él
+// Hide dropdown if the user clicks outside
 document.addEventListener('click', function(event) {
     const dropdown = document.getElementById('language-select');
     const languageButton = document.querySelector('.language-btn');
-    
-    if (!languageButton.contains(event.target) && !dropdown.contains(event.target)) {
+
+    if (dropdown && languageButton && !languageButton.contains(event.target) && !dropdown.contains(event.target)) {
         dropdown.style.display = 'none';
     }
 });

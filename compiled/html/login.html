@@ -12,18 +12,16 @@
 </head>
 <body>
     <div class="login_bg">
-
-   <!-- Login section -->
+ <!-- Login section -->
         <div class="container_signup">
             <div class="tabs">
-                <a href="#" class="active">Login</a>
+                <a href="login.html" class="active">Login</a>
                 <a href="signup.html">Signup</a>
             </div>
             <h2>Login</h2>
 
-            <!-- i Added ID attributes for JS to work -->
-            <input type="email" id="email" placeholder="Email">
-            <input type="password" id="password" placeholder="Password">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
 
             <div id="remember">
                 <label>
@@ -32,10 +30,71 @@
                 </label>
             </div>
 
-            <!-- i Added onclick event for login -->
-            <button class="btn btn-primary rounded-pill  py-2 px-5" onclick="logIn(event)">Login</button>
-       </div>
-       
+            <button class="btn" id="loginBtn" onclick="logIn(event)">Login</button>
+
+
+        </div>
+
+<!--hidden gem access-->
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+        <script>
+            // Check if user is already logged in with @tcd.ie email
+            document.addEventListener("DOMContentLoaded", function () {
+                let email = sessionStorage.getItem("userEmail");
+
+                if (email && email.endsWith("@tcd.ie")) {
+
+                    if (window.location.pathname !== '/login.html') {
+                        window.location.href = "trinityhome.html"; // make sure link is correct
+                    }
+                }
+            });
+
+            function handleCredentialResponse(response) {
+                const jwt = response.credential;
+                const userInfo = JSON.parse(atob(jwt.split('.')[1]));
+
+                // Check if email ends with @tcd.ie
+                if (!userInfo.email.endsWith("@tcd.ie")) {
+                    alert("Access restricted to TCD users.");
+                    window.location.href = "signup.html"; // Redirect unauthorized users
+                } else {
+                    sessionStorage.setItem("userEmail", userInfo.email); // Store the user's email
+                    sessionStorage.setItem("userName", userInfo.name);
+                    window.location.href = "trinityhome.html"; // Redirect to home page for logged-in users
+                }
+            }
+
+            google.accounts.id.initialize({
+                client_id: "YOUR_GOOGLE_CLIENT_ID",
+                callback: handleCredentialResponse
+            });
+
+            google.accounts.id.prompt(); // Show login popup
+
+
+            document.getElementById("loginBtn").addEventListener("click", function () {
+                let email = document.getElementById("email").value;
+                let password = document.getElementById("password").value;
+
+                // Validate that email and password are entered
+                if (!email || !password) {
+                    alert("Please enter both email and password!");
+                    return;
+                }
+
+
+                // Check if the email ends with @tcd.ie (basic access check)
+                if (email.endsWith("@tcd.ie")) {
+                    sessionStorage.setItem("userEmail", email); // Store the email in sessionStorage
+                    sessionStorage.setItem("userName", "TCD User"); // Placeholder for user's name
+                    window.location.href = "trinityhome.html"; // Redirect to home page (check link)
+                } else {
+                    alert("Access restricted to TCD users.");
+                }
+            });
+        </script>   
      
   <!-- Footer -->
   <footer class="footer p-5">   
@@ -72,9 +131,10 @@
             const password = document.getElementById('password').value;
 
             // Retrieve stored user data
-            const storedEmail = localStorage.getItem('email');
-            const storedFirstName = localStorage.getItem('firstName');
-
+             const storedEmail = localStorage.getItem('userEmail');
+                const storedPassword = localStorage.getItem('userPassword');
+                const storedFirstName = localStorage.getItem('firstName');
+            
             if (email === storedEmail) {
                 alert("Login successful! Welcome, " + storedFirstName);
                 window.location.href = "profile.html"; // Redirect to profile

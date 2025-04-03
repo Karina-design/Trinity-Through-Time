@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity College Website</title>
+    <link rel="stylesheet" href="assets/css/rubric-styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="ttt.html">
+                <img class="logo" src="assets/images/logo ttt (6).png">
+            </a>
+            <div class="logo">Trinity<br>Through <br>Time</div>
+
+
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#explore">EXPLORE</a></li>
+                <li><a href="#profile">PROFILE</a></li>
+            </ul>
+            <ul class="login">
+                <a href="#LogIn">
+                    <img class="logo" src="assets/images/login_账户.png"></a>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <div class="tabs">
+            <a href="gmb-image.html" class="tab">IMAGE</a>
+            <a href="rubric-video.html" class="tab active">VIDEO</a>
+            <a href="rubric-virtual-tour.html" class="tab">VIRTUAL TOUR</a>
+        </div>
+
+        <div class="video-container">
+            <video width="1500" height="650" controls autoplay muted loop>
+                <source src="assets/images/rubric_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="building-section ">
+            <div class="building-title">
+                <h1 class="building-title">Graduate Memorial Building (GMB)</h1>
+            </div>
+            <div class="building-description">
+                <p> The Graduates Memorial Building (GMB) is a striking architectural structure comprising two residential halls flanking a central society hall and debating chamber. 
+                    This fifteen-bay, four-storey building, complete with attic accommodation, overlooks both Botany Bay and Parliament Square. It's facade, crafted from polished Irish 
+                    limestone, features central gable-fronts and is dominated by prominent ashlar limestone chimneys with carved string courses, as well as ornately carved limestone
+                     urns. Construction of the GMB (Graduates Memorial Building) began in 1892 and it officially opened in 1902.
+                    The GMB was built as a visual symbol of Trinity College’s tercentenary—marking 300 years since its foundation in 1592.
+                    The GMB stands on the site of an 18th-century Georgian red-brick structure known as the “Rotten Row”, which resembled the existing Rubrics.
+                    Funding for the GMB came from Trinity graduates, which inspired its name.
+                    It also serves as a memorial to Trinity graduates who died in war, beginning with the Boer War.
+               The architet of the building was Sir Thomas Drew. </p>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="video-container">
+            <button class="button left" onclick="changeVideo('video1')">←</button>
+
+            <div class="video-wrapper">
+                <iframe id="video-player" width="1000" height="600" src="https://www.youtube.com/embed/1lmTs3bXOq4"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
+            </div>
+
+            <button class="button right" onclick="changeVideo()">→</button>
+
+
+        </div>
+
+        <script src="assets/script/video.js"></script>
+
+        <div class="vedio-section ">
+            <div class="vedio-description">
+        
+
+        
+
+            </div>
+        </div>
+
+        <div class="interviews-container">
+            <div class="interviews-title">
+                <h1 class="interviews-title">Interviews</h1>
+            </div>
+            <div class="shorts-wrapper" id="shortsWrapper">
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/2ysiXqe5AoA" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title">Top Things To Do On Campus </div>
+                </div>
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/FqpDK-2CyYk" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title">Trinity Tour</div>
+                </div>
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/qQ_sZR1f0ts" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title">A Staff Guided Tour</div>
+                </div>
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/DGoZrZEbGSE" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title">Top Facts About Trinity</div>
+                </div>
+                <div class="short-card">
+                    <iframe width="290" height="510" src="https://www.youtube.com/embed/SknagaudMks" frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="short-title"> A Hidden Gem</div>
+                </div>
+
+            </div>
+            <button class="nav-button nav-right" onclick="scrollRight()">❯</button>
+        </div>
+
+        <script src="assets/script/rubric-video.js"></script>
+
+        <footer>
+            <p>College Green, Dublin 2, Ireland</p>
+            <p>Meet the Creators: Aviva | Robyn | Karina | Xinyu | Morgan | Oscar</p>
+        </footer>
+
+
+    </body>
+
+</html>

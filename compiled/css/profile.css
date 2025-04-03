@@ -184,9 +184,6 @@ body::before {
     border-radius: 10px;
 }
 
-.tab-content img:hover {
-    transform: scale(1, 1);
-}
 
 .sign-out-btn {
     width: 100%;

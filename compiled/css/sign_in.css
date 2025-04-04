@@ -51,7 +51,7 @@ body {
     width: 100%;
 }
 
-.container_signup{
+.container{
     background: rgba(0, 0, 0, 0.85);
     border-radius: 15px;
     color: white;
@@ -60,6 +60,7 @@ body {
     margin: auto; /* Center the container */
     max-width: 30rem; 
     padding: 3rem; 
+    
 }
 
         .tabs {

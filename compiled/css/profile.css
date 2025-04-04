@@ -60,6 +60,7 @@ body::before {
     position: relative;
     z-index: 2;
     display: flex;
+    min-width: 20rem;
     padding-top: 50px;
     justify-content: center;
     align-items: center;

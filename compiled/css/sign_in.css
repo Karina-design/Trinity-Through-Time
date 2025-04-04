@@ -50,18 +50,50 @@ body {
     flex-direction: column;
     width: 100%;
 }
-
-.container{
+/*
+.container {
     background: rgba(0, 0, 0, 0.85);
     border-radius: 15px;
     color: white;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    margin: auto; /* Center the container */
-    max-width: 30rem; 
+    margin: auto; 
+    min-width: 10rem;
     padding: 3rem; 
-    
+}*/
+
+.container {
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    color: white;
+    text-align: center; 
+    max-width: 50rem;
+    margin: auto; /* Center the container */
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;    
 }
+
+/* For Tablets */
+@media (max-width: 768px) {
+    .container {
+        max-width: 80%; 
+        padding: 2rem;
+    }
+}
+
+/* For Mobile */
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%; 
+        padding: 1.5rem;
+    }
+}
+
+
 
         .tabs {
             display: flex;
@@ -86,7 +118,7 @@ body {
 
         h2 {
             font-size: 20px;
-            font-weight: 400px;
+            font-weight: 400;
             margin-bottom: 2px;
           
         }

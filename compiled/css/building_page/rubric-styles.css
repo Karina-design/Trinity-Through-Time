@@ -671,3 +671,7 @@ body {
     transform: translateX(-50%) translateY(-5px);
 }
 
+.map-wrapper {
+    display: flex;
+    justify-content: center;
+}

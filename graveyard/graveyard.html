@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity College Website</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/rubric-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar"> <!--change nav bar-->
+            <a href="ttt.html">
+                <img class="logo" src="assets/images/logo ttt (6).png">
+            </a>
+            <div class="logo">Trinity<br>Through <br>Time</div>
+
+
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#explore">EXPLORE</a></li>
+                <li><a href="#profile">PROFILE</a></li>
+            </ul>
+            <ul class="login">
+                <a href="#LogIn">
+                    <img class="logo" src="assets/images/login_账户.png"></a>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+    <div class="content_active">
+        <img id="slideshow" src="assets/images/dining.jpeg " alt="Slideshow Image">
+        <div class="TrinityCollegeDublin"> TRINITY COLLEGE DUBLIN
+            <div class="geography">
+                <button onclick="moveToGeography()">DINING HALL </button>
+            </div>
+
+        </div>
+
+
+
+        <div class="dot-container">
+            <button class="dot active" onclick="goToSlide(0)"></button>
+            <button class="dot" onclick="goToSlide(1)"></button>
+            <button class="dot" onclick="goToSlide(2)"></button>
+        </div>
+
+        <div class="building-section ">
+            <div class="building-title">
+                <h1 class="building-title">CHALONER'S CORNER</h1>
+            </div>
+            <div class="building-description">
+                <p>Chaloner's Corner was built in 1699 and is the smallest graveyard in Ireland. The graveyard was named after Dr. Luke Chaloner who was one of the founders of Trinity and our first ever Provost. The small graveyard small graveyard is nested between the laundrette and Dining Hall. Chaloner's Corner is also the site of the original chapel in Trinity (where Luke Chaloner was buried) and is why his tomb is located outside the chapel in such an obsqure spot.
+                    
+                   
+                </p>
+               
+
+            </div>
+        </div>
+        <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4763.8124558659665!2d-6.260369023365425!3d53.344934772288866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9b27df11b9%3A0x5a55c78865543aa7!2sCementerio!5e0!3m2!1sen!2sie!4v1743730273475!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map-wrapper"></iframe>
+</div>
+        <div class="image-carousel-section">
+
+
+            <div class="carousel-container">
+                <div class="background-blur"></div>
+
+
+               
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="building-title"> The Did You Know Section:</h1>
+    </div>
+    <div class="building-description1">
+
+    </div>
+    <div class="image-gallery">
+        <img src="assets/images//DYK1.png"
+            alt="The Leaning Tower of Trinity? – Over the centuries, the building has slightly shifted due to settling, leading some students to joke that it’s Dublin’s version of the Leaning Tower of Pisa—just much slower and far less dramatic."
+            class="image">
+        <img src="assets/images/didyouknow(2).png"
+            alt="Alumni and Scholars: Trinity College has produced many prominent figures in various fields, including Oscar Wilde, Samuel Beckett, Douglas Hyde (Ireland’s first president), and Ernest Walton, who was a co-winner of the Nobel Prize in Physics in 1951"
+            class="image">
+        <img src="assets/images/didyouknow(3).png"
+            alt="The Campanile and the Famous Tradition: The Trinity College Campanile is a landmark bell tower located at the heart of the campus. A well-known campus tradition involves students not walking under the Campanile, as it is believed to be bad luck — said to bring an early death or misfortune to anyone who does."
+            class="image">
+        <img src="assets/images/didyouknow(4).png"
+            alt="Historic Library and the Book of Kells: The college is home to the famous Trinity College Library, which houses the Book of Kells, a beautifully illuminated manuscript of the Four Gospels dating from around the 9th century. It is one of Ireland’s most visited tourist attractions and a key part of the college's rich history."
+            class="image">
+    </div>
+
+
+
+    <footer> <!--change the footer for each page -->
+        <p>Trinity College Green, Dublin 2, Ireland</p>
+        <p>Meet the Creators: Aviva | Robyn | Karina | Xinyu | Morgan | Oscar</p>
+    </footer>
+
+
+
+    <script src="assets/script/rubric-javascript.js" type="text/javascript"></script>
+
+</body>
+
+
+
+
+</html>
